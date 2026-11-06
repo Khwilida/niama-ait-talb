@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#244c35">
-<meta name="description" content="Niama Ait Talb, dépôt d'aliments pour animaux à Meknès.">
-<title>Niama Ait Talb | Aliments pour animaux à Meknès</title>
+<meta name="description" content="Niama Ait Talb à Meknès : alimentation animale et produits d'élevage.">
+<title>Niama Ait Talb | Alimentation animale à Meknès</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,14 @@ nav a:hover{color:#b58127}
 .menu-toggle{display:none;border:0;background:var(--cream);border-radius:10px;padding:9px 12px;color:var(--green);font-size:21px;cursor:pointer}
 
 .hero{position:relative;min-height:570px;display:flex;align-items:center;background:var(--dark);overflow:hidden}
-.hero-image{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,39,25,.88),rgba(15,39,25,.48)),url("entree-depot.jpg.png") center 52%/cover no-repeat;opacity:.98}
+.hero-image{
+position:absolute;
+inset:0;
+background-image:linear-gradient(90deg,rgba(15,39,25,.88),rgba(15,39,25,.48)),url("./entree-depot.jpg.png");
+background-position:center 52%;
+background-size:cover;
+background-repeat:no-repeat;
+}
 .hero-content{position:relative;z-index:1;color:white;padding:90px 0;max-width:690px}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;color:#f0c66e;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700;margin-bottom:18px}
 .eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
@@ -81,7 +88,15 @@ h2{font-family:"Playfair Display",serif;color:var(--green);font-size:clamp(32px,
 
 .about{background:var(--cream)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
-.about-image{min-height:420px;border-radius:10px;background:url("entree-depot.jpg.png") center/cover no-repeat;box-shadow:var(--shadow)}
+.about-image{
+min-height:420px;
+border-radius:10px;
+background-image:url("./entree-depot.jpg.png");
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+box-shadow:var(--shadow);
+}
 .about-copy .section-kicker{margin-bottom:12px}
 .about-copy h2{text-align:left}
 .about-copy p{color:#59645c;margin:0 0 16px}
@@ -135,7 +150,7 @@ section{padding:65px 0}
 }
 
 @media(max-width:420px){
-.container{width:min(100% - 28px,1140px)}
+.container{width:min(calc(100% - 28px),1140px)}
 .product-grid{grid-template-columns:1fr}
 .brand-name{font-size:17px}
 .brand-mark{width:42px;height:42px}
@@ -147,7 +162,7 @@ section{padding:65px 0}
 
 <div class="topbar">
 <div class="container topbar-inner">
-<span data-fr="📍 Meknès, Maroc" data-ar="📍 مكناس، المغرب">📍 Meknès, Maroc</span>
+<span>📍 Meknès, Maroc</span>
 <div class="language">
 <button type="button" class="active" data-lang="fr">FR</button>
 <button type="button" data-lang="ar">العربية</button>
@@ -207,27 +222,27 @@ section{padding:65px 0}
 
 <div class="product-grid">
 <article class="product-card">
-<div class="product-icon">🐔</div>
-<h3 data-fr="Volailles" data-ar="الدواجن">Volailles</h3>
-<p data-fr="Aliments pour poulets, poules et poussins." data-ar="أعلاف الدجاج والدجاجات والصيصان.">Aliments pour poulets, poules et poussins.</p>
+<div class="product-icon">🐑</div>
+<h3 data-fr="Moutons et bovins" data-ar="الأغنام والأبقار">Moutons et bovins</h3>
+<p data-fr="Alimentation pour moutons, vaches et taureaux." data-ar="أعلاف الأغنام والأبقار والثيران.">Alimentation pour moutons, vaches et taureaux.</p>
 </article>
 
 <article class="product-card">
-<div class="product-icon">🐄</div>
-<h3 data-fr="Bétail" data-ar="الماشية">Bétail</h3>
-<p data-fr="Alimentation pour bovins, ovins et caprins." data-ar="أعلاف الأبقار والأغنام والماعز.">Alimentation pour bovins, ovins et caprins.</p>
+<div class="product-icon">🕊️</div>
+<h3 data-fr="Pigeons et oiseaux" data-ar="الحمام والطيور">Pigeons et oiseaux</h3>
+<p data-fr="Aliments pour pigeons et différentes espèces d’oiseaux." data-ar="أعلاف الحمام ومختلف أنواع الطيور.">Aliments pour pigeons et différentes espèces d’oiseaux.</p>
 </article>
 
 <article class="product-card">
 <div class="product-icon">🐎</div>
-<h3 data-fr="Chevaux" data-ar="الخيول">Chevaux</h3>
-<p data-fr="Des aliments adaptés aux besoins des chevaux." data-ar="أعلاف مناسبة لاحتياجات الخيول.">Des aliments adaptés aux besoins des chevaux.</p>
+<h3 data-fr="Chevaux et lapins" data-ar="الخيول والأرانب">Chevaux et lapins</h3>
+<p data-fr="Alimentation adaptée aux chevaux et aux lapins." data-ar="أعلاف مناسبة للخيول والأرانب.">Alimentation adaptée aux chevaux et aux lapins.</p>
 </article>
 
 <article class="product-card">
-<div class="product-icon">🐕</div>
-<h3 data-fr="Chiens et chats" data-ar="الكلاب والقطط">Chiens et chats</h3>
-<p data-fr="Alimentation pour les animaux de compagnie." data-ar="أغذية الحيوانات الأليفة من القطط والكلاب.">Alimentation pour les animaux de compagnie.</p>
+<div class="product-icon">🧂</div>
+<h3 data-fr="Accessoires d’élevage" data-ar="مستلزمات تربية المواشي">Accessoires d’élevage</h3>
+<p data-fr="Blocs de sel à lécher pour bovins, pinces et boucles d’identification pour moutons, et autres produits d’élevage." data-ar="قوالب الملح للأبقار، كماشات وحلقات تعريف الأغنام، ومنتجات أخرى لتربية المواشي.">Blocs de sel à lécher pour bovins, pinces et boucles d’identification pour moutons, et autres produits d’élevage.</p>
 </article>
 </div>
 </div>
@@ -240,8 +255,8 @@ section{padding:65px 0}
 <div class="about-copy">
 <div class="section-kicker" data-fr="À propos de nous" data-ar="من نحن">À propos de nous</div>
 <h2 data-fr="Au service des éleveurs de Meknès" data-ar="في خدمة مربي الماشية بمكناس">Au service des éleveurs de Meknès</h2>
-<p data-fr="Niama Ait Talb est un dépôt spécialisé dans la vente d’aliments pour animaux. Nous accompagnons les éleveurs et les particuliers en proposant des solutions adaptées à différents types d’animaux." data-ar="نيعمة آيت الطالب مستودع متخصص في بيع أعلاف الحيوانات. نرافق المربين والأفراد من خلال توفير منتجات تناسب مختلف أنواع الحيوانات.">Niama Ait Talb est un dépôt spécialisé dans la vente d’aliments pour animaux. Nous accompagnons les éleveurs et les particuliers en proposant des solutions adaptées à différents types d’animaux.</p>
-<p data-fr="Notre priorité : vous accueillir, vous conseiller et contribuer au bon développement de vos élevages." data-ar="هدفنا هو استقبالكم وتقديم النصح والمساهمة في نجاح تربيتكم.">Notre priorité : vous accueillir, vous conseiller et contribuer au bon développement de vos élevages.</p>
+<p data-fr="Niama Ait Talb est un dépôt spécialisé dans la vente d’aliments pour animaux. Nous proposons des produits pour moutons, bovins, pigeons, oiseaux, chevaux et lapins." data-ar="نيعمة آيت الطالب مستودع متخصص في بيع أعلاف الحيوانات. نوفر منتجات للأغنام والأبقار والحمام والطيور والخيول والأرانب.">Niama Ait Talb est un dépôt spécialisé dans la vente d’aliments pour animaux. Nous proposons des produits pour moutons, bovins, pigeons, oiseaux, chevaux et lapins.</p>
+<p data-fr="Vous trouverez également des accessoires utiles à l’élevage, comme les blocs de sel pour bovins et le matériel d’identification des moutons. Notre priorité : vous accueillir et vous conseiller." data-ar="كما نوفر مستلزمات مفيدة للتربية مثل قوالب الملح للأبقار ومعدات تعريف الأغنام. هدفنا استقبالكم وتقديم النصح لكم.">Vous trouverez également des accessoires utiles à l’élevage, comme les blocs de sel pour bovins et le matériel d’identification des moutons. Notre priorité : vous accueillir et vous conseiller.</p>
 
 <div class="about-points">
 <div><span>✓</span><span data-fr="Une gamme pour plusieurs espèces" data-ar="مجموعة متنوعة لمختلف الحيوانات">Une gamme pour plusieurs espèces</span></div>
@@ -260,7 +275,7 @@ section{padding:65px 0}
 <p data-fr="Retrouvez-nous à Meknès pour découvrir nos produits." data-ar="زورونا في مكناس لاكتشاف منتجاتنا.">Retrouvez-nous à Meknès pour découvrir nos produits.</p>
 </div>
 <div class="gallery-photo">
-<img src="entree-depot.jpg.png" alt="Entrée du dépôt Niama Ait Talb à Meknès">
+<img src="./entree-depot.jpg.png" alt="Entrée du dépôt Niama Ait Talb à Meknès">
 </div>
 </div>
 </section>
