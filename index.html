@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -30,9 +29,7 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -41,19 +38,10 @@ body {
   line-height: 1.6;
 }
 
-body[dir="rtl"] {
-  font-family: 'Cairo', sans-serif;
-}
+body[dir="rtl"] { font-family: 'Cairo', sans-serif; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
-}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
 
 .container {
   width: min(1160px, 90%);
@@ -122,9 +110,7 @@ header {
   transition: color .2s;
 }
 
-.nav-links a:hover {
-  color: var(--gold);
-}
+.nav-links a:hover { color: var(--gold); }
 
 .nav-actions {
   display: flex;
@@ -150,7 +136,7 @@ header {
   font-size: 26px;
 }
 
-/* ACCUEIL : UNIQUE PHOTO DU SITE */
+/* ACCUEIL */
 
 .hero {
   min-height: 620px;
@@ -200,9 +186,7 @@ header {
   margin-bottom: 22px;
 }
 
-.hero h1 span {
-  color: var(--gold);
-}
+.hero h1 span { color: var(--gold); }
 
 .hero p {
   max-width: 550px;
@@ -228,9 +212,7 @@ header {
 
 /* SECTIONS */
 
-.section {
-  padding: 85px 0;
-}
+.section { padding: 85px 0; }
 
 .section-heading {
   text-align: center;
@@ -255,15 +237,11 @@ header {
   margin-bottom: 15px;
 }
 
-.section-heading p {
-  color: var(--muted);
-}
+.section-heading p { color: var(--muted); }
 
 /* PRESENTATION */
 
-.about {
-  background: var(--cream);
-}
+.about { background: var(--cream); }
 
 .about-content {
   max-width: 850px;
@@ -297,9 +275,7 @@ header {
 
 /* PRODUITS */
 
-.products {
-  background: white;
-}
+.products { background: white; }
 
 .product-grid {
   display: grid;
@@ -351,9 +327,7 @@ header {
   font-size: 13px;
 }
 
-.product-card li {
-  margin-top: 7px;
-}
+.product-card li { margin-top: 7px; }
 
 .product-card li::before {
   content: "✓";
@@ -364,9 +338,7 @@ header {
 
 /* ENGAGEMENT */
 
-.values {
-  background: #edeadd;
-}
+.values { background: #edeadd; }
 
 .values-grid {
   display: grid;
@@ -403,9 +375,7 @@ header {
   color: white;
 }
 
-.contact .section-heading h2 {
-  color: white;
-}
+.contact .section-heading h2 { color: white; }
 
 .contact .section-heading p {
   color: rgba(255,255,255,.75);
@@ -431,9 +401,7 @@ header {
   margin-bottom: 12px;
 }
 
-.contact-card h3 {
-  margin-bottom: 8px;
-}
+.contact-card h3 { margin-bottom: 8px; }
 
 .contact-card p {
   color: rgba(255,255,255,.8);
@@ -446,8 +414,14 @@ header {
   font-weight: 600;
 }
 
-.contact-card a:hover {
-  color: white;
+.contact-card a:hover { color: white; }
+
+.phone-number {
+  font-size: 19px !important;
+  font-weight: 700;
+  color: white !important;
+  letter-spacing: .5px;
+  margin: 12px 0 !important;
 }
 
 .contact-buttons {
@@ -520,21 +494,13 @@ body[dir="rtl"] .product-card li::before {
     box-shadow: 0 10px 20px rgba(0,0,0,.08);
   }
 
-  .nav-links.open {
-    display: flex;
-  }
+  .nav-links.open { display: flex; }
 
-  .menu-btn {
-    display: block;
-  }
+  .menu-btn { display: block; }
 
-  .product-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
+  .product-grid { grid-template-columns: repeat(2,1fr); }
 
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
+  .contact-grid { grid-template-columns: 1fr; }
 
   .values-grid {
     grid-template-columns: 1fr;
@@ -543,33 +509,19 @@ body[dir="rtl"] .product-card li::before {
 }
 
 @media (max-width: 550px) {
-  .hero {
-    min-height: 560px;
-  }
+  .hero { min-height: 560px; }
 
-  .hero-content {
-    padding: 75px 0;
-  }
+  .hero-content { padding: 75px 0; }
 
-  .hero p {
-    font-size: 15px;
-  }
+  .hero p { font-size: 15px; }
 
-  .section {
-    padding: 65px 0;
-  }
+  .section { padding: 65px 0; }
 
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
+  .product-grid { grid-template-columns: 1fr; }
 
-  .about-content h2 {
-    font-size: 30px;
-  }
+  .about-content h2 { font-size: 30px; }
 
-  .logo-text strong {
-    font-size: 17px;
-  }
+  .logo-text strong { font-size: 17px; }
 }
 </style>
 </head>
@@ -578,7 +530,6 @@ body[dir="rtl"] .product-card li::before {
 
 <header>
   <div class="container navbar">
-
     <a href="#accueil" class="logo">
       <div class="logo-icon">🌾</div>
       <div class="logo-text">
@@ -598,20 +549,15 @@ body[dir="rtl"] .product-card li::before {
       <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">العربية</button>
       <button class="menu-btn" onclick="toggleMenu()" aria-label="Ouvrir le menu">☰</button>
     </div>
-
   </div>
 </header>
 
 <main>
 
-<!-- ACCUEIL : PHOTO UNIQUE -->
-
 <section class="hero" id="accueil">
   <div class="hero-image"></div>
-
   <div class="container">
     <div class="hero-content">
-
       <span class="hero-tag"
         data-fr="Votre partenaire agricole à Meknès"
         data-ar="شريككم الفلاحي بمكناس">
@@ -635,18 +581,13 @@ body[dir="rtl"] .product-card li::before {
         data-ar="اكتشفوا منتجاتنا ←">
         Découvrir nos produits →
       </a>
-
     </div>
   </div>
 </section>
 
-<!-- PRESENTATION SANS PHOTO -->
-
 <section class="section about" id="apropos">
   <div class="container">
-
     <div class="about-content">
-
       <div class="eyebrow"
         data-fr="Qui sommes-nous ?"
         data-ar="من نحن؟">
@@ -676,16 +617,12 @@ body[dir="rtl"] .product-card li::before {
         data-ar="الجودة في خدمة تربية الماشية.">
         La qualité au service de l'élevage.
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- PRESENTATION DES PRODUITS -->
-
 <section class="section products" id="produits">
   <div class="container">
-
     <div class="section-heading">
       <div class="eyebrow"
         data-fr="Notre sélection"
@@ -710,14 +647,8 @@ body[dir="rtl"] .product-card li::before {
 
       <article class="product-card">
         <div class="product-icon">🐑</div>
-        <h3 data-fr="Aliments pour ovins & caprins" data-ar="أعلاف الأغنام والماعز">
-          Aliments pour ovins & caprins
-        </h3>
-        <p
-          data-fr="Des produits destinés à l'alimentation des moutons et des chèvres."
-          data-ar="منتجات مخصصة لتغذية الأغنام والماعز.">
-          Des produits destinés à l'alimentation des moutons et des chèvres.
-        </p>
+        <h3 data-fr="Aliments pour ovins & caprins" data-ar="أعلاف الأغنام والماعز">Aliments pour ovins & caprins</h3>
+        <p data-fr="Des produits destinés à l'alimentation des moutons et des chèvres." data-ar="منتجات مخصصة لتغذية الأغنام والماعز.">Des produits destinés à l'alimentation des moutons et des chèvres.</p>
         <ul>
           <li data-fr="Aliments pour moutons" data-ar="أعلاف الأغنام">Aliments pour moutons</li>
           <li data-fr="Aliments pour chèvres" data-ar="أعلاف الماعز">Aliments pour chèvres</li>
@@ -726,14 +657,8 @@ body[dir="rtl"] .product-card li::before {
 
       <article class="product-card">
         <div class="product-icon">🐄</div>
-        <h3 data-fr="Aliments pour bovins" data-ar="أعلاف الأبقار">
-          Aliments pour bovins
-        </h3>
-        <p
-          data-fr="Des produits pour accompagner l'alimentation des vaches et des taureaux."
-          data-ar="منتجات لتلبية احتياجات الأبقار والثيران الغذائية.">
-          Des produits pour accompagner l'alimentation des vaches et des taureaux.
-        </p>
+        <h3 data-fr="Aliments pour bovins" data-ar="أعلاف الأبقار">Aliments pour bovins</h3>
+        <p data-fr="Des produits pour accompagner l'alimentation des vaches et des taureaux." data-ar="منتجات لتلبية احتياجات الأبقار والثيران الغذائية.">Des produits pour accompagner l'alimentation des vaches et des taureaux.</p>
         <ul>
           <li data-fr="Aliments pour bovins" data-ar="أعلاف الأبقار">Aliments pour bovins</li>
           <li data-fr="Blocs de sel à lécher" data-ar="قوالب الملح للّعق">Blocs de sel à lécher</li>
@@ -742,14 +667,8 @@ body[dir="rtl"] .product-card li::before {
 
       <article class="product-card">
         <div class="product-icon">🐔</div>
-        <h3 data-fr="Volailles & oiseaux" data-ar="الدواجن والطيور">
-          Volailles & oiseaux
-        </h3>
-        <p
-          data-fr="Une sélection d'aliments pour les volailles et différentes espèces d'oiseaux."
-          data-ar="مجموعة من الأعلاف للدواجن ومختلف أنواع الطيور.">
-          Une sélection d'aliments pour les volailles et différentes espèces d'oiseaux.
-        </p>
+        <h3 data-fr="Volailles & oiseaux" data-ar="الدواجن والطيور">Volailles & oiseaux</h3>
+        <p data-fr="Une sélection d'aliments pour les volailles et différentes espèces d'oiseaux." data-ar="مجموعة من الأعلاف للدواجن ومختلف أنواع الطيور.">Une sélection d'aliments pour les volailles et différentes espèces d'oiseaux.</p>
         <ul>
           <li data-fr="Poules et poussins" data-ar="الدجاج والصيصان">Poules et poussins</li>
           <li data-fr="Pigeons et oiseaux" data-ar="الحمام والطيور">Pigeons et oiseaux</li>
@@ -758,14 +677,8 @@ body[dir="rtl"] .product-card li::before {
 
       <article class="product-card">
         <div class="product-icon">🐴</div>
-        <h3 data-fr="Aliments pour chevaux" data-ar="أعلاف الخيول">
-          Aliments pour chevaux
-        </h3>
-        <p
-          data-fr="Des produits alimentaires pour les chevaux et autres équidés."
-          data-ar="منتجات غذائية للخيول والحيوانات من فصيلتها.">
-          Des produits alimentaires pour les chevaux et autres équidés.
-        </p>
+        <h3 data-fr="Aliments pour chevaux" data-ar="أعلاف الخيول">Aliments pour chevaux</h3>
+        <p data-fr="Des produits alimentaires pour les chevaux et autres équidés." data-ar="منتجات غذائية للخيول والحيوانات من فصيلتها.">Des produits alimentaires pour les chevaux et autres équidés.</p>
         <ul>
           <li data-fr="Alimentation équine" data-ar="أعلاف الخيول">Alimentation équine</li>
           <li data-fr="Produits pour équidés" data-ar="منتجات الخيول">Produits pour équidés</li>
@@ -774,14 +687,8 @@ body[dir="rtl"] .product-card li::before {
 
       <article class="product-card">
         <div class="product-icon">🐇</div>
-        <h3 data-fr="Lapins & petits animaux" data-ar="الأرانب والحيوانات الصغيرة">
-          Lapins & petits animaux
-        </h3>
-        <p
-          data-fr="Des aliments adaptés aux lapins et aux autres petits animaux."
-          data-ar="أعلاف مناسبة للأرانب والحيوانات الصغيرة الأخرى.">
-          Des aliments adaptés aux lapins et aux autres petits animaux.
-        </p>
+        <h3 data-fr="Lapins & petits animaux" data-ar="الأرانب والحيوانات الصغيرة">Lapins & petits animaux</h3>
+        <p data-fr="Des aliments adaptés aux lapins et aux autres petits animaux." data-ar="أعلاف مناسبة للأرانب والحيوانات الصغيرة الأخرى.">Des aliments adaptés aux lapins et aux autres petits animaux.</p>
         <ul>
           <li data-fr="Aliments pour lapins" data-ar="أعلاف الأرانب">Aliments pour lapins</li>
           <li data-fr="Aliments pour petits animaux" data-ar="أعلاف الحيوانات الصغيرة">Aliments pour petits animaux</li>
@@ -790,14 +697,8 @@ body[dir="rtl"] .product-card li::before {
 
       <article class="product-card">
         <div class="product-icon">🐕</div>
-        <h3 data-fr="Aliments pour chiens & chats" data-ar="أعلاف الكلاب والقطط">
-          Aliments pour chiens & chats
-        </h3>
-        <p
-          data-fr="Des produits pour l'alimentation quotidienne des animaux de compagnie."
-          data-ar="منتجات لتغذية الحيوانات الأليفة بشكل يومي.">
-          Des produits pour l'alimentation quotidienne des animaux de compagnie.
-        </p>
+        <h3 data-fr="Aliments pour chiens & chats" data-ar="أعلاف الكلاب والقطط">Aliments pour chiens & chats</h3>
+        <p data-fr="Des produits pour l'alimentation quotidienne des animaux de compagnie." data-ar="منتجات لتغذية الحيوانات الأليفة بشكل يومي.">Des produits pour l'alimentation quotidienne des animaux de compagnie.</p>
         <ul>
           <li data-fr="Croquettes pour chiens" data-ar="طعام الكلاب">Croquettes pour chiens</li>
           <li data-fr="Aliments pour chats" data-ar="طعام القطط">Aliments pour chats</li>
@@ -806,14 +707,8 @@ body[dir="rtl"] .product-card li::before {
 
       <article class="product-card">
         <div class="product-icon">🧰</div>
-        <h3 data-fr="Matériel & accessoires d'élevage" data-ar="معدات ومستلزمات التربية">
-          Matériel & accessoires d'élevage
-        </h3>
-        <p
-          data-fr="Des équipements utiles pour l'identification et le suivi de vos animaux."
-          data-ar="معدات مفيدة لترقيم الحيوانات ومتابعتها.">
-          Des équipements utiles pour l'identification et le suivi de vos animaux.
-        </p>
+        <h3 data-fr="Matériel & accessoires d'élevage" data-ar="معدات ومستلزمات التربية">Matériel & accessoires d'élevage</h3>
+        <p data-fr="Des équipements utiles pour l'identification et le suivi de vos animaux." data-ar="معدات مفيدة لترقيم الحيوانات ومتابعتها.">Des équipements utiles pour l'identification et le suivi de vos animaux.</p>
         <ul>
           <li data-fr="Pinces à boucles auriculaires" data-ar="كماشات ترقيم الأذن">Pinces à boucles auriculaires</li>
           <li data-fr="Boucles d'identification" data-ar="حلقات تعريف الحيوانات">Boucles d'identification</li>
@@ -824,86 +719,46 @@ body[dir="rtl"] .product-card li::before {
   </div>
 </section>
 
-<!-- NOS ENGAGEMENTS -->
-
 <section class="section values">
   <div class="container">
-
     <div class="section-heading">
-      <div class="eyebrow"
-        data-fr="Nos engagements"
-        data-ar="التزاماتنا">
-        Nos engagements
-      </div>
-
-      <h2
-        data-fr="Un partenaire de proximité"
-        data-ar="شريك قريب منكم">
-        Un partenaire de proximité
-      </h2>
-
-      <p
-        data-fr="Notre objectif : vous proposer des produits utiles et un accueil à l'écoute de vos besoins."
-        data-ar="هدفنا هو توفير منتجات مفيدة واستقبال يلبي احتياجاتكم.">
-        Notre objectif : vous proposer des produits utiles et un accueil à l'écoute de vos besoins.
-      </p>
+      <div class="eyebrow" data-fr="Nos engagements" data-ar="التزاماتنا">Nos engagements</div>
+      <h2 data-fr="Un partenaire de proximité" data-ar="شريك قريب منكم">Un partenaire de proximité</h2>
+      <p data-fr="Notre objectif : vous proposer des produits utiles et un accueil à l'écoute de vos besoins." data-ar="هدفنا هو توفير منتجات مفيدة واستقبال يلبي احتياجاتكم.">Notre objectif : vous proposer des produits utiles et un accueil à l'écoute de vos besoins.</p>
     </div>
 
     <div class="values-grid">
-
       <div class="value-card">
         <div class="value-icon">🌾</div>
         <h3 data-fr="Diversité des produits" data-ar="تنوع المنتجات">Diversité des produits</h3>
-        <p
-          data-fr="Des aliments et accessoires pour différentes espèces animales."
-          data-ar="أعلاف ومستلزمات لمختلف أنواع الحيوانات.">
-          Des aliments et accessoires pour différentes espèces animales.
-        </p>
+        <p data-fr="Des aliments et accessoires pour différentes espèces animales." data-ar="أعلاف ومستلزمات لمختلف أنواع الحيوانات.">Des aliments et accessoires pour différentes espèces animales.</p>
       </div>
 
       <div class="value-card">
         <div class="value-icon">🤝</div>
         <h3 data-fr="Proximité & conseil" data-ar="القرب والنصيحة">Proximité & conseil</h3>
-        <p
-          data-fr="Un accueil disponible pour vous orienter selon vos besoins."
-          data-ar="استقبال ومساعدة لاختيار المنتجات المناسبة لاحتياجاتكم.">
-          Un accueil disponible pour vous orienter selon vos besoins.
-        </p>
+        <p data-fr="Un accueil disponible pour vous orienter selon vos besoins." data-ar="استقبال ومساعدة لاختيار المنتجات المناسبة لاحتياجاتكم.">Un accueil disponible pour vous orienter selon vos besoins.</p>
       </div>
 
       <div class="value-card">
         <div class="value-icon">🐄</div>
         <h3 data-fr="Au service des éleveurs" data-ar="في خدمة المربين">Au service des éleveurs</h3>
-        <p
-          data-fr="Des solutions pour accompagner les agriculteurs et les particuliers."
-          data-ar="حلول لمواكبة الفلاحين والأفراد في تربية الحيوانات.">
-          Des solutions pour accompagner les agriculteurs et les particuliers.
-        </p>
+        <p data-fr="Des solutions pour accompagner les agriculteurs et les particuliers." data-ar="حلول لمواكبة الفلاحين والأفراد في تربية الحيوانات.">Des solutions pour accompagner les agriculteurs et les particuliers.</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT AVEC TELEPHONE BIEN VISIBLE -->
 
 <section class="section contact" id="contact">
   <div class="container">
 
     <div class="section-heading">
-      <div class="eyebrow"
-        data-fr="Restons en contact"
-        data-ar="تواصلوا معنا">
-        Restons en contact
-      </div>
-
-      <h2 data-fr="Contactez-nous" data-ar="اتصلوا بنا">
-        Contactez-nous
-      </h2>
-
-      <p
-        data-fr="Besoin d'un renseignement sur nos produits ? Contactez-nous ou venez nous rendre visite à Meknès."
-        data-ar="هل تحتاجون إلى معلومات حول منتجاتنا؟ اتصلوا بنا أو زورونا في مكناس.">
+      <div class="eyebrow" data-fr="Restons en contact" data-ar="تواصلوا معنا">Restons en contact</div>
+      <h2 data-fr="Contactez-nous" data-ar="اتصلوا بنا">Contactez-nous</h2>
+      <p data-fr="Besoin d'un renseignement sur nos produits ? Contactez-nous ou venez nous rendre visite à Meknès."
+         data-ar="هل تحتاجون إلى معلومات حول منتجاتنا؟ اتصلوا بنا أو زورونا في مكناس.">
         Besoin d'un renseignement sur nos produits ? Contactez-nous ou venez nous rendre visite à Meknès.
       </p>
     </div>
@@ -914,40 +769,33 @@ body[dir="rtl"] .product-card li::before {
         <div class="icon">📍</div>
         <h3 data-fr="Notre adresse" data-ar="عنواننا">Notre adresse</h3>
         <p>Sidi Bouzekri, Meknès, Maroc</p>
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=VF68%2B22W%2C%20Sidi%20Bouzekri%2C%20Maroc"
-          target="_blank"
-          rel="noopener"
-          data-fr="Voir l'itinéraire →"
-          data-ar="عرض الموقع ←">
+        <a href="https://www.google.com/maps/search/?api=1&query=VF68%2B22W%2C%20Sidi%20Bouzekri%2C%20Maroc"
+           target="_blank" rel="noopener"
+           data-fr="Voir l'itinéraire →" data-ar="عرض الموقع ←">
           Voir l'itinéraire →
         </a>
       </div>
 
       <div class="contact-card">
         <div class="icon">📞</div>
-        <h3 data-fr="Téléphone" data-ar="الهاتف">Téléphone</h3>
-        <p>+212 662 138 445</p>
+        <h3 data-fr="Téléphone du magasin" data-ar="هاتف المتجر">Téléphone du magasin</h3>
+        <p class="phone-number">+212 662 138 445</p>
         <a href="tel:+212662138445"
-          data-fr="Appeler maintenant →"
-          data-ar="اتصل الآن ←">
-          Appeler maintenant →
+           data-fr="📞 Appeler maintenant" data-ar="📞 اتصل الآن">
+          📞 Appeler maintenant
         </a>
       </div>
 
       <div class="contact-card">
         <div class="icon">💬</div>
         <h3 data-fr="WhatsApp" data-ar="واتساب">WhatsApp</h3>
-        <p
-          data-fr="Contactez-nous directement par message."
-          data-ar="تواصلوا معنا مباشرة عبر الرسائل.">
+        <p data-fr="Contactez-nous directement par message."
+           data-ar="تواصلوا معنا مباشرة عبر الرسائل.">
           Contactez-nous directement par message.
         </p>
         <a href="https://wa.me/212662138445"
-          target="_blank"
-          rel="noopener"
-          data-fr="Écrire sur WhatsApp →"
-          data-ar="راسلنا عبر واتساب ←">
+           target="_blank" rel="noopener"
+           data-fr="Écrire sur WhatsApp →" data-ar="راسلنا عبر واتساب ←">
           Écrire sur WhatsApp →
         </a>
       </div>
@@ -955,19 +803,25 @@ body[dir="rtl"] .product-card li::before {
     </div>
 
     <div class="contact-buttons">
+      <a class="contact-btn" href="tel:+212662138445"
+         data-fr="📞 Appeler le magasin"
+         data-ar="📞 اتصلوا بالمتجر">
+        📞 Appeler le magasin
+      </a>
+
       <a class="contact-btn" href="https://wa.me/212662138445"
-        target="_blank" rel="noopener"
-        data-fr="Contacter le magasin sur WhatsApp"
-        data-ar="تواصلوا مع المتجر عبر واتساب">
-        Contacter le magasin sur WhatsApp
+         target="_blank" rel="noopener"
+         data-fr="💬 Contacter sur WhatsApp"
+         data-ar="💬 تواصلوا عبر واتساب">
+        💬 Contacter sur WhatsApp
       </a>
 
       <a class="contact-btn secondary"
-        href="https://www.google.com/maps/search/?api=1&query=VF68%2B22W%2C%20Sidi%20Bouzekri%2C%20Maroc"
-        target="_blank" rel="noopener"
-        data-fr="Trouver le magasin"
-        data-ar="اعثروا على المتجر">
-        Trouver le magasin
+         href="https://www.google.com/maps/search/?api=1&query=VF68%2B22W%2C%20Sidi%20Bouzekri%2C%20Maroc"
+         target="_blank" rel="noopener"
+         data-fr="📍 Trouver le magasin"
+         data-ar="📍 اعثروا على المتجر">
+        📍 Trouver le magasin
       </a>
     </div>
 
@@ -979,9 +833,8 @@ body[dir="rtl"] .product-card li::before {
 <footer>
   <div class="container">
     © 2026 Niama Ait Talb —
-    <span
-      data-fr="La qualité au service de l'élevage."
-      data-ar="الجودة في خدمة تربية الماشية.">
+    <span data-fr="La qualité au service de l'élevage."
+          data-ar="الجودة في خدمة تربية الماشية.">
       La qualité au service de l'élevage.
     </span>
   </div>
