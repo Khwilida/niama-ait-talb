@@ -253,21 +253,15 @@ header {
   color: var(--muted);
 }
 
+/* SECTION À PROPOS */
+
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  align-items: center;
+  display: block;
 }
 
-.about-image {
-  min-height: 420px;
-  border-radius: 10px;
-  background-image: url("https://raw.githubusercontent.com/Khwilida/niama-ait-talb/main/entree-depot.jpg.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-shadow: var(--shadow);
+.about-content {
+  max-width: 850px;
+  margin: auto;
 }
 
 .about-content h2 {
@@ -291,6 +285,8 @@ header {
   font-weight: 700;
   margin-top: 25px;
 }
+
+/* SECTION PRODUITS */
 
 .products {
   background: #fff;
@@ -339,28 +335,16 @@ header {
   font-size: 14px;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 22px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-  border-radius: 9px;
-  box-shadow: var(--shadow);
-}
+/* SECTION NOTRE ESPACE SANS PHOTO */
 
 .gallery-note {
+  max-width: 850px;
+  margin: auto;
   background: var(--green);
   color: white;
   border-radius: 9px;
-  padding: 35px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 45px;
+  text-align: center;
 }
 
 .gallery-note h3 {
@@ -373,6 +357,8 @@ header {
 .gallery-note p {
   color: rgba(255,255,255,.8);
 }
+
+/* SECTION CONTACT */
 
 .contact {
   background: var(--green);
@@ -455,21 +441,8 @@ body[dir="rtl"] .about-highlight {
     display: block;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .about-image {
-    min-height: 320px;
-  }
-
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
   }
 
   .contact-grid {
@@ -498,8 +471,8 @@ body[dir="rtl"] .about-highlight {
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid img {
-    height: 260px;
+  .gallery-note {
+    padding: 30px 22px;
   }
 
   .logo-text strong {
@@ -537,51 +510,66 @@ body[dir="rtl"] .about-highlight {
 </header>
 
 <main>
+
+<!-- ACCUEIL : LA SEULE SECTION AVEC LA PHOTO -->
+
 <section class="hero" id="accueil">
   <div class="hero-image"></div>
   <div class="container">
     <div class="hero-content">
       <span class="hero-tag" data-fr="Votre partenaire agricole à Meknès" data-ar="شريككم الفلاحي بمكناس">Votre partenaire agricole à Meknès</span>
+
       <h1 data-fr="Tout pour le bien-être de <span>votre élevage.</span>" data-ar="كل ما يحتاجه <span>قطيعكم ومواشيكم.</span>">
         Tout pour le bien-être de <span>votre élevage.</span>
       </h1>
+
       <p data-fr="Découvrez notre sélection d'aliments pour animaux et de produits d'élevage. Un service de proximité au cœur de Meknès." data-ar="اكتشفوا مجموعتنا من أعلاف الحيوانات ومستلزمات تربية الماشية. خدمة قريبة منكم في قلب مكناس.">
         Découvrez notre sélection d'aliments pour animaux et de produits d'élevage. Un service de proximité au cœur de Meknès.
       </p>
+
       <a href="#produits" class="primary-btn" data-fr="Découvrir nos produits →" data-ar="اكتشفوا منتجاتنا ←">Découvrir nos produits →</a>
     </div>
   </div>
 </section>
 
+<!-- À PROPOS : SANS PHOTO -->
+
 <section class="section" id="apropos">
   <div class="container about-grid">
-    <div class="about-image" role="img" aria-label="Entrée du dépôt Niama Ait Talb"></div>
-
     <div class="about-content">
       <div class="eyebrow" data-fr="Qui sommes-nous ?" data-ar="من نحن؟">Qui sommes-nous ?</div>
+
       <h2 data-fr="Au service des éleveurs et des agriculteurs" data-ar="في خدمة مربي الماشية والفلاحين">Au service des éleveurs et des agriculteurs</h2>
+
       <p data-fr="Niama Ait Talb est un dépôt spécialisé dans la vente d'aliments pour animaux et de produits destinés à l'élevage, situé à Meknès." data-ar="نعمة آيت الطالب مستودع متخصص في بيع أعلاف الحيوانات ومستلزمات تربية الماشية، يوجد بمدينة مكناس.">
         Niama Ait Talb est un dépôt spécialisé dans la vente d'aliments pour animaux et de produits destinés à l'élevage, situé à Meknès.
       </p>
+
       <p data-fr="Nous proposons différentes solutions pour accompagner les éleveurs au quotidien : alimentation animale, accessoires et produits adaptés aux besoins de chaque élevage." data-ar="نوفر مجموعة متنوعة من المنتجات لمواكبة احتياجات المربين اليومية، من الأعلاف إلى المستلزمات والمنتجات الخاصة بتربية الحيوانات.">
         Nous proposons différentes solutions pour accompagner les éleveurs au quotidien : alimentation animale, accessoires et produits adaptés aux besoins de chaque élevage.
       </p>
+
       <div class="about-highlight" data-fr="La qualité au service de l'élevage." data-ar="الجودة في خدمة تربية الماشية.">La qualité au service de l'élevage.</div>
     </div>
   </div>
 </section>
 
+<!-- PRODUITS -->
+
 <section class="section products" id="produits">
   <div class="container">
     <div class="section-heading">
       <div class="eyebrow" data-fr="Notre sélection" data-ar="مجموعتنا">Notre sélection</div>
+
       <h2 data-fr="Nos produits & spécialités" data-ar="منتجاتنا وتخصصاتنا">Nos produits & spécialités</h2>
+
       <p data-fr="Une gamme de produits pour répondre aux besoins de vos animaux et de votre activité d'élevage." data-ar="مجموعة من المنتجات لتلبية احتياجات حيواناتكم وأنشطتكم في مجال تربية الماشية.">
         Une gamme de produits pour répondre aux besoins de vos animaux et de votre activité d'élevage.
       </p>
     </div>
 
     <div class="product-grid">
+
       <article class="product-card">
         <div class="product-icon">🐑</div>
         <h3 data-fr="Ovins & caprins" data-ar="الأغنام والماعز">Ovins & caprins</h3>
@@ -617,50 +605,58 @@ body[dir="rtl"] .about-highlight {
         <h3 data-fr="Accessoires d'élevage" data-ar="مستلزمات التربية">Accessoires d'élevage</h3>
         <p data-fr="Matériel et accessoires : blocs de sel, pinces à boucles auriculaires et boucles d'identification." data-ar="معدات ومستلزمات التربية: قوالب الملح، كماشات ترقيم الأذن وحلقات التعريف.">Matériel et accessoires : blocs de sel, pinces à boucles auriculaires et boucles d'identification.</p>
       </article>
+
     </div>
   </div>
 </section>
+
+<!-- NOTRE ESPACE : SANS PHOTO -->
 
 <section class="section" id="galerie">
   <div class="container">
     <div class="section-heading">
       <div class="eyebrow" data-fr="Notre espace" data-ar="فضاؤنا">Notre espace</div>
+
       <h2 data-fr="Bienvenue chez Niama Ait Talb" data-ar="مرحبا بكم في نعمة آيت الطالب">Bienvenue chez Niama Ait Talb</h2>
+
       <p data-fr="Un dépôt de proximité pour accompagner les professionnels et les passionnés d'élevage." data-ar="مستودع قريب منكم لخدمة المهنيين وكل المهتمين بتربية الماشية.">
         Un dépôt de proximité pour accompagner les professionnels et les passionnés d'élevage.
       </p>
     </div>
 
-    <div class="gallery-grid">
-      <img
-        src="https://raw.githubusercontent.com/Khwilida/niama-ait-talb/main/entree-depot.jpg.png"
-        alt="Entrée du dépôt Niama Ait Talb à Meknès">
-      <div class="gallery-note">
-        <h3 data-fr="Un service de proximité" data-ar="خدمة قريبة منكم">Un service de proximité</h3>
-        <p data-fr="Nous vous accueillons pour vous conseiller et vous orienter vers les produits adaptés à vos besoins." data-ar="نستقبلكم لتقديم النصائح ومساعدتكم في اختيار المنتجات المناسبة لاحتياجاتكم.">
-          Nous vous accueillons pour vous conseiller et vous orienter vers les produits adaptés à vos besoins.
-        </p>
-      </div>
+    <div class="gallery-note">
+      <h3 data-fr="Un service de proximité" data-ar="خدمة قريبة منكم">Un service de proximité</h3>
+
+      <p data-fr="Nous vous accueillons pour vous conseiller et vous orienter vers les produits adaptés à vos besoins." data-ar="نستقبلكم لتقديم النصائح ومساعدتكم في اختيار المنتجات المناسبة لاحتياجاتكم.">
+        Nous vous accueillons pour vous conseiller et vous orienter vers les produits adaptés à vos besoins.
+      </p>
     </div>
   </div>
 </section>
+
+<!-- CONTACT -->
 
 <section class="section contact" id="contact">
   <div class="container">
     <div class="section-heading">
       <div class="eyebrow" data-fr="Restons en contact" data-ar="تواصلوا معنا">Restons en contact</div>
+
       <h2 data-fr="Contactez-nous" data-ar="اتصلوا بنا">Contactez-nous</h2>
+
       <p data-fr="Une question sur nos produits ? N'hésitez pas à nous contacter ou à venir nous rendre visite." data-ar="هل لديكم سؤال حول منتجاتنا؟ لا تترددوا في الاتصال بنا أو زيارتنا.">
         Une question sur nos produits ? N'hésitez pas à nous contacter ou à venir nous rendre visite.
       </p>
     </div>
 
     <div class="contact-grid">
+
       <div class="contact-card">
         <div class="icon">📍</div>
         <h3 data-fr="Notre emplacement" data-ar="موقعنا">Notre emplacement</h3>
         <p>Meknès, Maroc</p>
-        <p><a href="https://www.google.com/maps/search/?api=1&query=Meknes+Maroc" target="_blank" rel="noopener" data-fr="Voir sur Google Maps →" data-ar="الموقع على الخريطة ←">Voir sur Google Maps →</a></p>
+        <p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Meknes+Maroc" target="_blank" rel="noopener" data-fr="Voir sur Google Maps →" data-ar="الموقع على الخريطة ←">Voir sur Google Maps →</a>
+        </p>
       </div>
 
       <div class="contact-card">
@@ -674,14 +670,17 @@ body[dir="rtl"] .about-highlight {
         <h3 data-fr="Horaires" data-ar="أوقات العمل">Horaires</h3>
         <p data-fr="Contactez-nous pour connaître nos horaires." data-ar="اتصلوا بنا لمعرفة أوقات العمل.">Contactez-nous pour connaître nos horaires.</p>
       </div>
+
     </div>
   </div>
 </section>
+
 </main>
 
 <footer>
   <div class="container">
-    © 2026 Niama Ait Talb — <span data-fr="La qualité au service de l'élevage." data-ar="الجودة في خدمة تربية الماشية.">La qualité au service de l'élevage.</span>
+    © 2026 Niama Ait Talb —
+    <span data-fr="La qualité au service de l'élevage." data-ar="الجودة في خدمة تربية الماشية.">La qualité au service de l'élevage.</span>
   </div>
 </footer>
 
@@ -696,6 +695,7 @@ function toggleLanguage() {
 
   document.querySelectorAll("[data-fr]").forEach(element => {
     const translation = element.getAttribute("data-" + currentLanguage);
+
     if (translation !== null) {
       element.innerHTML = translation;
     }
