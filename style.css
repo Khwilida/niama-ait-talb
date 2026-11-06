@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Cairo:wght@400;600;700&display=swap');
 
 :root{--green:#244c35;--green-dark:#173625;--gold:#d9a441;--cream:#f4ebdd;--paper:#fffdf8;--ink:#243128;--muted:#68736b;--line:#e7e2d8;--shadow:0 18px 45px rgba(26,48,33,.10)}
@@ -21,7 +22,7 @@ button{font:inherit}
 .main-nav a:hover:after{right:0}
 .menu-toggle{display:none;background:none;border:0;color:var(--green);font-size:1.6rem;cursor:pointer}
 .hero{min-height:570px;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--green-dark);color:white}
-.hero-image{position:absolute;inset:0;background-image:url('assets/entree-depot.jpg');background-size:cover;background-position:center 46%;transform:scale(1.015)}
+.hero-image{position:absolute;inset:0;background-image:url('entree-depot.jpg.png');background-size:cover;background-position:center 46%;transform:scale(1.015)}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,36,23,.87) 0%,rgba(17,40,27,.73) 45%,rgba(17,40,27,.18) 100%)}
 .hero-content{position:relative;z-index:1;max-width:760px;padding:78px clamp(24px,8vw,120px)}
 .eyebrow{font-size:.73rem;letter-spacing:.17em;font-weight:700;color:#ad8132;margin:0 0 14px}
@@ -54,7 +55,7 @@ button{font:inherit}
 .product-card p{color:var(--muted);font-size:.9rem;margin:0}
 .small-note{font-size:.78rem;color:var(--muted);text-align:center;margin:25px 0 0}
 .about-section{display:grid;grid-template-columns:1fr 1fr;min-height:430px;background:var(--cream)}
-.about-image{min-height:400px;background:url('assets/entree-depot.jpg') center/cover no-repeat}
+.about-image{min-height:400px;background:url('entree-depot.jpg.png') center/cover no-repeat}
 .about-copy{align-self:center;padding:65px clamp(24px,6vw,85px)}
 .about-copy p:not(.eyebrow){color:#5c665e;margin:0 0 22px}
 .text-link{color:var(--green);font-weight:700;border-bottom:1px solid var(--gold);padding-bottom:4px}
