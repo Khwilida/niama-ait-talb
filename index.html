@@ -1,1710 +1,1045 @@
+
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#183d2b">
-
-  <title>Niama Ait Talb | Alimentation animale à Meknès</title>
-  <meta name="description" content="Niama Ait Talb, votre dépôt d'alimentation animale à Sidi Bouzekri, Meknès. Aliments pour élevage, céréales et accessoires.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --green: #183d2b;
-      --green-dark: #102c1e;
-      --green-light: #315d40;
-      --cream: #f7f5ed;
-      --beige: #e9e3d3;
-      --gold: #c79b50;
-      --text: #263329;
-      --muted: #758075;
-      --white: #fff;
-      --radius: 20px;
-      --shadow: 0 14px 40px rgba(24,61,43,.10);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family: "DM Sans", sans-serif;
-      color: var(--text);
-      background: var(--cream);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body[dir="rtl"] {
-      font-family: "Cairo", sans-serif;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    .container {
-      width: min(1160px, calc(100% - 44px));
-      margin: auto;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 26px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .section-heading {
-      max-width: 650px;
-      margin-bottom: 42px;
-    }
-
-    .section-heading h2 {
-      font-family: "Playfair Display", serif;
-      color: var(--green);
-      font-size: clamp(32px, 4vw, 48px);
-      line-height: 1.15;
-      margin: 14px 0;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 570px;
-    }
-
-    /* TOP BAR */
-
-    .topbar {
-      background: var(--green-dark);
-      color: rgba(255,255,255,.85);
-      font-size: 12px;
-      padding: 9px 0;
-    }
-
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .topbar-left,
-    .topbar-right {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-
-    .topbar span {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-    }
-
-    /* HEADER */
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(247,245,237,.96);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(24,61,43,.08);
-    }
-
-    .nav {
-      min-height: 82px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-    }
-
-    .brand-mark {
-      width: 47px;
-      height: 47px;
-      border-radius: 15px;
-      background: var(--green);
-      color: var(--gold);
-      display: grid;
-      place-items: center;
-      font-family: "Playfair Display", serif;
-      font-size: 23px;
-      font-weight: 800;
-      box-shadow: 0 7px 18px rgba(24,61,43,.18);
-    }
-
-    .brand-name {
-      color: var(--green);
-      font-weight: 800;
-      font-size: 17px;
-      line-height: 1.1;
-    }
-
-    .brand-sub {
-      color: var(--muted);
-      font-size: 10px;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
-      margin-top: 5px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #405246;
-      font-size: 13px;
-      font-weight: 700;
-      transition: .2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .language-btn {
-      border: 1px solid rgba(24,61,43,.2);
-      color: var(--green);
-      background: transparent;
-      border-radius: 30px;
-      padding: 9px 14px;
-      font-size: 12px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: .2s;
-    }
-
-    .language-btn:hover {
-      background: var(--green);
-      color: white;
-    }
-
-    .nav-contact {
-      background: var(--green);
-      color: white;
-      padding: 12px 18px;
-      border-radius: 30px;
-      font-size: 12px;
-      font-weight: 800;
-      transition: .2s;
-    }
-
-    .nav-contact:hover {
-      background: var(--gold);
-      color: var(--green-dark);
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border: 0;
-      border-radius: 12px;
-      background: var(--green);
-      color: white;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 660px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(12,34,23,.91) 0%, rgba(12,34,23,.76) 48%, rgba(12,34,23,.18) 100%),
-        url("entree-depot.jpg.png") center 48% / cover no-repeat;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0;
-      height: 120px;
-      background: linear-gradient(transparent, rgba(16,44,30,.25));
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      width: min(1160px, calc(100% - 44px));
-      margin: auto;
-      padding: 100px 0 120px;
-    }
-
-    .hero-copy {
-      max-width: 690px;
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: #f0d29b;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-    }
-
-    .hero-kicker::before {
-      content: "";
-      width: 35px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    .hero h1 {
-      color: white;
-      font-family: "Playfair Display", serif;
-      font-size: clamp(44px, 6.4vw, 76px);
-      line-height: 1.06;
-      letter-spacing: -1.5px;
-      max-width: 680px;
-      margin-bottom: 25px;
-      text-wrap: balance;
-    }
-
-    .hero h1 em {
-      color: #e4bd78;
-      font-style: normal;
-    }
-
-    .hero-description {
-      color: rgba(255,255,255,.84);
-      font-size: 17px;
-      line-height: 1.8;
-      max-width: 550px;
-      margin-bottom: 34px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 23px;
-      border-radius: 40px;
-      font-size: 13px;
-      font-weight: 800;
-      transition: .25s;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: var(--green-dark);
-    }
-
-    .btn-primary:hover {
-      background: #e0b96f;
-      transform: translateY(-3px);
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,.55);
-      color: white;
-      background: rgba(255,255,255,.06);
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: var(--green);
-    }
-
-    .hero-note {
-      margin-top: 55px;
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      color: rgba(255,255,255,.78);
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .hero-note-icon {
-      width: 38px;
-      height: 38px;
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: var(--gold);
-      font-size: 17px;
-    }
-
-    /* INTRO STRIP */
-
-    .intro-strip {
-      background: var(--green);
-      color: white;
-      padding: 25px 0;
-    }
-
-    .intro-strip-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .intro-strip strong {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(18px, 2.5vw, 25px);
-      font-weight: 600;
-    }
-
-    .intro-strip span {
-      color: rgba(255,255,255,.7);
-      font-size: 13px;
-    }
-
-    /* CATEGORIES */
-
-    .categories {
-      padding: 105px 0;
-      background: var(--cream);
-    }
-
-    .categories-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-    }
-
-    .category-card {
-      background: white;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 8px 28px rgba(24,61,43,.06);
-      transition: .3s;
-      border: 1px solid rgba(24,61,43,.06);
-    }
-
-    .category-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow);
-    }
-
-    .category-image {
-      height: 205px;
-      position: relative;
-      overflow: hidden;
-      background: #dce3d8;
-    }
-
-    .category-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .6s;
-    }
-
-    .category-card:hover .category-image img {
-      transform: scale(1.07);
-    }
-
-    .category-number {
-      position: absolute;
-      top: 13px;
-      left: 13px;
-      width: 31px;
-      height: 31px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: var(--green);
-      background: rgba(255,255,255,.92);
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    .category-info {
-      padding: 20px 18px 23px;
-    }
-
-    .category-info h3 {
-      color: var(--green);
-      font-family: "Playfair Display", serif;
-      font-size: 20px;
-      margin-bottom: 7px;
-    }
-
-    .category-info p {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.7;
-    }
-
-    /* PRODUCTS */
-
-    .products {
-      background: #eeeade;
-      padding: 100px 0;
-    }
-
-    .products-layout {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .products-visual {
-      position: relative;
-      min-height: 470px;
-      border-radius: 26px;
-      overflow: hidden;
-      background:
-        linear-gradient(0deg, rgba(16,44,30,.45), transparent 60%),
-        url("entree-depot.jpg.png") center / cover no-repeat;
-      box-shadow: var(--shadow);
-    }
-
-    .visual-label {
-      position: absolute;
-      bottom: 25px;
-      left: 25px;
-      right: 25px;
-      color: white;
-    }
-
-    .visual-label span {
-      color: #f0d29b;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .visual-label h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 29px;
-      margin-top: 6px;
-    }
-
-    .products-copy .section-heading {
-      margin-bottom: 25px;
-    }
-
-    .products-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px;
-    }
-
-    .product-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(255,255,255,.7);
-      border: 1px solid rgba(24,61,43,.07);
-      border-radius: 14px;
-      padding: 15px;
-    }
-
-    .product-icon {
-      flex: 0 0 39px;
-      width: 39px;
-      height: 39px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      background: #e5eadf;
-      color: var(--green);
-      font-size: 18px;
-    }
-
-    .product-item strong {
-      display: block;
-      color: var(--green);
-      font-size: 13px;
-    }
-
-    .product-item small {
-      display: block;
-      color: var(--muted);
-      font-size: 10px;
-      margin-top: 3px;
-    }
-
-    /* ACCESSORIES */
-
-    .accessories {
-      padding: 100px 0;
-      background: var(--cream);
-    }
-
-    .accessories-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .accessory-card {
-      background: white;
-      border: 1px solid rgba(24,61,43,.07);
-      border-radius: 18px;
-      padding: 27px;
-      display: flex;
-      align-items: flex-start;
-      gap: 17px;
-      transition: .25s;
-    }
-
-    .accessory-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .accessory-icon {
-      flex: 0 0 52px;
-      height: 52px;
-      border-radius: 15px;
-      background: var(--green);
-      color: var(--gold);
-      display: grid;
-      place-items: center;
-      font-size: 22px;
-    }
-
-    .accessory-card h3 {
-      color: var(--green);
-      font-size: 15px;
-      margin: 3px 0 6px;
-    }
-
-    .accessory-card p {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
-    }
-
-    /* BANNER */
-
-    .quote-banner {
-      background: var(--green);
-      color: white;
-      padding: 75px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .quote-banner::before,
-    .quote-banner::after {
-      content: "";
-      position: absolute;
-      width: 270px;
-      height: 270px;
-      border: 1px solid rgba(255,255,255,.09);
-      border-radius: 50%;
-    }
-
-    .quote-banner::before {
-      top: -150px;
-      left: -90px;
-    }
-
-    .quote-banner::after {
-      bottom: -190px;
-      right: -80px;
-    }
-
-    .quote-inner {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .quote-inner span {
-      color: var(--gold);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .quote-inner h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(30px, 4vw, 45px);
-      line-height: 1.2;
-      margin: 17px 0;
-    }
-
-    .quote-inner p {
-      color: rgba(255,255,255,.72);
-      font-size: 14px;
-    }
-
-    /* ABOUT */
-
-    .about {
-      padding: 105px 0;
-      background: #eeeade;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 75px;
-    }
-
-    .about-image {
-      height: 450px;
-      border-radius: 25px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .about-copy h2 {
-      font-family: "Playfair Display", serif;
-      color: var(--green);
-      font-size: clamp(34px, 4vw, 46px);
-      line-height: 1.15;
-      margin: 15px 0 20px;
-    }
-
-    .about-copy > p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.9;
-      margin-bottom: 25px;
-    }
-
-    .about-points {
-      display: grid;
-      gap: 13px;
-    }
-
-    .about-point {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--green);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .check {
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      background: #dce7d9;
-      color: var(--green);
-      display: grid;
-      place-items: center;
-      font-size: 13px;
-      flex-shrink: 0;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      padding: 105px 0;
-      background: var(--cream);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 25px;
-    }
-
-    .contact-card {
-      background: var(--green);
-      color: white;
-      padding: 38px;
-      border-radius: 22px;
-    }
-
-    .contact-card h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 34px;
-      line-height: 1.2;
-      margin: 14px 0;
-    }
-
-    .contact-card > p {
-      color: rgba(255,255,255,.7);
-      font-size: 13px;
-      line-height: 1.8;
-      margin-bottom: 30px;
-    }
-
-    .contact-detail {
-      display: flex;
-      align-items: flex-start;
-      gap: 13px;
-      padding: 16px 0;
-      border-top: 1px solid rgba(255,255,255,.13);
-    }
-
-    .contact-detail-icon {
-      width: 38px;
-      height: 38px;
-      flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      border-radius: 12px;
-      background: rgba(255,255,255,.1);
-      color: var(--gold);
-      font-size: 17px;
-    }
-
-    .contact-detail strong {
-      display: block;
-      font-size: 12px;
-      margin-bottom: 4px;
-    }
-
-    .contact-detail a,
-    .contact-detail span {
-      color: rgba(255,255,255,.76);
-      font-size: 12px;
-      overflow-wrap: anywhere;
-    }
-
-    .map-card {
-      min-height: 480px;
-      overflow: hidden;
-      border-radius: 22px;
-      background: #e2e5dc;
-      box-shadow: var(--shadow);
-    }
-
-    .map-card iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 480px;
-      border: 0;
-    }
-
-    /* FOOTER */
-
-    .footer {
-      background: var(--green-dark);
-      color: white;
-      padding: 28px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .footer-brand {
-      font-family: "Playfair Display", serif;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .footer p {
-      color: rgba(255,255,255,.55);
-      font-size: 11px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
-      color: rgba(255,255,255,.7);
-      font-size: 12px;
-    }
-
-    .footer-links a:hover {
-      color: var(--gold);
-    }
-
-    /* WHATSAPP */
-
-    .whatsapp-float {
-      position: fixed;
-      z-index: 900;
-      bottom: 24px;
-      right: 24px;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: #20bd68;
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 27px;
-      box-shadow: 0 8px 25px rgba(0,0,0,.2);
-      transition: .2s;
-    }
-
-    .whatsapp-float:hover {
-      transform: translateY(-5px) scale(1.04);
-    }
-
-    /* RTL */
-
-    [dir="rtl"] .eyebrow::before {
-      display: none;
-    }
-
-    [dir="rtl"] .eyebrow::after {
-      content: "";
-      width: 26px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    [dir="rtl"] .hero {
-      background:
-        linear-gradient(270deg, rgba(12,34,23,.91) 0%, rgba(12,34,23,.76) 48%, rgba(12,34,23,.18) 100%),
-        url("entree-depot.jpg.png") center 48% / cover no-repeat;
-    }
-
-    [dir="rtl"] .hero-kicker::before {
-      display: none;
-    }
-
-    [dir="rtl"] .hero-kicker::after {
-      content: "";
-      width: 35px;
-      height: 2px;
-      background: var(--gold);
-    }
-
-    [dir="rtl"] .category-number {
-      left: auto;
-      right: 13px;
-    }
-
-    [dir="rtl"] .visual-label {
-      left: 25px;
-      right: 25px;
-      text-align: right;
-    }
-
-    [dir="rtl"] .whatsapp-float {
-      right: auto;
-      left: 24px;
-    }
-
-    [dir="rtl"] .about-point {
-      flex-direction: row;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 1000px) {
-      .nav-links {
-        gap: 17px;
-      }
-
-      .categories-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .products-layout,
-      .about-grid {
-        gap: 40px;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .container {
-        width: min(100% - 32px, 560px);
-      }
-
-      .topbar-right {
-        display: none;
-      }
-
-      .topbar-inner {
-        justify-content: center;
-      }
-
-      .nav {
-        min-height: 72px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-contact {
-        display: none;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        padding: 20px 25px 25px;
-        background: var(--cream);
-        border-top: 1px solid rgba(24,61,43,.08);
-        box-shadow: 0 15px 20px rgba(0,0,0,.08);
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links li {
-        border-bottom: 1px solid rgba(24,61,43,.08);
-      }
-
-      .nav-links a {
-        display: block;
-        padding: 13px 0;
-      }
-
-      .hero {
-        min-height: 620px;
-        background-position: 60% center;
-      }
-
-      .hero-content {
-        width: calc(100% - 36px);
-        padding: 90px 0;
-      }
-
-      .hero h1 {
-        font-size: clamp(42px, 12vw, 62px);
-      }
-
-      .hero-description {
-        font-size: 14px;
-      }
-
-      .hero-note {
-        margin-top: 38px;
-      }
-
-      .intro-strip-inner {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-      }
-
-      .categories,
-      .products,
-      .accessories,
-      .about,
-      .contact {
-        padding: 75px 0;
-      }
-
-      .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 13px;
-      }
-
-      .category-image {
-        height: 160px;
-      }
-
-      .category-info {
-        padding: 16px 13px 18px;
-      }
-
-      .category-info h3 {
-        font-size: 17px;
-      }
-
-      .category-info p {
-        font-size: 11px;
-      }
-
-      .products-layout,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .products-visual {
-        min-height: 330px;
-        order: 2;
-      }
-
-      .products-copy {
-        order: 1;
-      }
-
-      .products-list {
-        gap: 10px;
-      }
-
-      .product-item {
-        padding: 12px;
-      }
-
-      .accessories-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-image {
-        height: 330px;
-      }
-
-      .contact-card {
-        padding: 28px;
-      }
-
-      .map-card,
-      .map-card iframe {
-        min-height: 350px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer-links {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-    }
-
-    @media (max-width: 390px) {
-      .brand-name {
-        font-size: 15px;
-      }
-
-      .brand-mark {
-        width: 41px;
-        height: 41px;
-      }
-
-      .categories-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .category-image {
-        height: 210px;
-      }
-
-      .products-list {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Niama Ait Talb, dépôt d'aliments pour animaux à Sidi Bouzekri, Meknès. Céréales, aliments pour élevage et accessoires.">
+<title>Niama Ait Talb | Au service des éleveurs</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #244b35;
+  --green-dark: #183625;
+  --green-light: #e8eee5;
+  --cream: #f8f5ed;
+  --beige: #eee6d6;
+  --gold: #c18c43;
+  --brown: #68523c;
+  --text: #26342a;
+  --muted: #77796f;
+  --white: #fff;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'DM Sans',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+}
+
+body.arabic {
+  font-family:'Cairo',sans-serif;
+  direction:rtl;
+}
+
+a { color:inherit; text-decoration:none; }
+
+button { font:inherit; cursor:pointer; }
+
+.container {
+  width:min(1160px, calc(100% - 44px));
+  margin:auto;
+}
+
+/* HEADER */
+header {
+  background:var(--cream);
+  position:relative;
+  z-index:10;
+}
+
+.navbar {
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  border-bottom:1px solid #e9e3d7;
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark {
+  width:48px;
+  height:48px;
+  background:var(--green);
+  color:#f6e9c9;
+  border-radius:50% 50% 50% 8px;
+  display:grid;
+  place-items:center;
+  font-family:'Playfair Display',serif;
+  font-size:23px;
+  font-weight:700;
+  transform:rotate(-4deg);
+}
+
+.logo-text strong {
+  display:block;
+  color:var(--green);
+  font-size:18px;
+  letter-spacing:.3px;
+}
+
+.logo-text span {
+  font-size:10px;
+  color:var(--muted);
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+nav {
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+nav a {
+  font-size:13px;
+  font-weight:600;
+  color:#4e594f;
+  transition:.2s;
+}
+
+nav a:hover { color:var(--gold); }
+
+.nav-actions {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.lang-btn {
+  border:1px solid #d9d2c5;
+  background:transparent;
+  color:var(--green);
+  padding:9px 14px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.contact-btn {
+  background:var(--green);
+  color:white;
+  border-radius:30px;
+  padding:12px 19px;
+  font-size:12px;
+  font-weight:700;
+  transition:.2s;
+}
+
+.contact-btn:hover { background:var(--green-dark); }
+
+/* HERO */
+.hero {
+  padding:54px 0 65px;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns: .92fr 1.08fr;
+  align-items:center;
+  gap:55px;
+}
+
+.eyebrow {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--gold);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:22px;
+}
+
+.eyebrow:before {
+  content:"";
+  width:27px;
+  height:2px;
+  background:var(--gold);
+}
+
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,5vw,65px);
+  line-height:1.09;
+  letter-spacing:-1.8px;
+  color:var(--green-dark);
+  max-width:540px;
+  margin-bottom:22px;
+}
+
+.hero h1 em {
+  color:var(--gold);
+  font-style:normal;
+}
+
+.hero-description {
+  color:#74766d;
+  font-size:15px;
+  line-height:1.9;
+  max-width:450px;
+  margin-bottom:30px;
+}
+
+.hero-buttons {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:13px;
+}
+
+.primary-btn {
+  background:var(--green);
+  color:white;
+  padding:15px 23px;
+  border-radius:4px;
+  font-size:13px;
+  font-weight:700;
+  display:inline-block;
+  transition:.2s;
+}
+
+.primary-btn:hover { background:var(--green-dark); transform:translateY(-2px); }
+
+.secondary-btn {
+  color:var(--green);
+  border:1px solid #d8d2c5;
+  padding:14px 22px;
+  border-radius:4px;
+  font-size:13px;
+  font-weight:700;
+  display:inline-block;
+}
+
+.hero-note {
+  margin-top:35px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#77796f;
+  font-size:12px;
+}
+
+.note-icon {
+  width:36px;
+  height:36px;
+  background:var(--green-light);
+  color:var(--green);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:17px;
+}
+
+.hero-visual {
+  position:relative;
+  padding:0 0 25px 25px;
+}
+
+.hero-visual:before {
+  content:"";
+  position:absolute;
+  width:75%;
+  height:75%;
+  right:-12px;
+  top:-14px;
+  background:var(--beige);
+  z-index:0;
+}
+
+.hero-photo {
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:440px;
+  object-fit:cover;
+  display:block;
+  border-radius:3px;
+  box-shadow:0 20px 45px #26342a20;
+}
+
+.photo-label {
+  position:absolute;
+  z-index:2;
+  left:0;
+  bottom:0;
+  background:var(--green);
+  color:white;
+  padding:18px 23px;
+  max-width:245px;
+}
+
+.photo-label strong {
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  margin-bottom:4px;
+}
+
+.photo-label span {
+  font-size:11px;
+  color:#d5ddcf;
+}
+
+/* STRIP */
+.info-strip {
+  background:var(--green);
+  color:white;
+  padding:24px 0;
+}
+
+.info-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.info-item {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  border-right:1px solid #ffffff30;
+}
+
+.info-item:last-child { border:0; }
+
+.info-icon { font-size:22px; }
+
+.info-item strong {
+  display:block;
+  font-size:13px;
+  font-weight:700;
+}
+
+.info-item span {
+  display:block;
+  font-size:11px;
+  color:#d0dbd0;
+  margin-top:3px;
+}
+
+/* SECTIONS */
+section { scroll-margin-top:25px; }
+
+.section {
+  padding:90px 0;
+}
+
+.section-heading {
+  text-align:center;
+  max-width:620px;
+  margin:0 auto 45px;
+}
+
+.section-kicker {
+  color:var(--gold);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:800;
+  margin-bottom:13px;
+}
+
+.section-heading h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4vw,43px);
+  color:var(--green-dark);
+  line-height:1.2;
+  margin-bottom:14px;
+}
+
+.section-heading p {
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+/* ANIMALS */
+.animals-section { background:#f0ede4; }
+
+.animals-grid {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:17px;
+}
+
+.animal-card {
+  background:white;
+  padding:25px 12px;
+  text-align:center;
+  border-radius:3px;
+  transition:.25s;
+  border-bottom:3px solid transparent;
+}
+
+.animal-card:hover {
+  transform:translateY(-5px);
+  border-color:var(--gold);
+  box-shadow:0 12px 25px #26342a0c;
+}
+
+.animal-card .animal-icon {
+  width:65px;
+  height:65px;
+  margin:0 auto 14px;
+  background:var(--green-light);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:30px;
+}
+
+.animal-card strong {
+  color:var(--green);
+  font-size:13px;
+}
+
+/* PRODUCTS */
+.products-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.product-card {
+  background:white;
+  border:1px solid #eee9df;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.product-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 15px 30px #26342a10;
+}
+
+.product-card img {
+  display:block;
+  width:100%;
+  height:185px;
+  object-fit:cover;
+  background:var(--beige);
+}
+
+.product-content { padding:20px; }
+
+.product-content small {
+  color:var(--gold);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+
+.product-content h3 {
+  color:var(--green);
+  font-family:'Playfair Display',serif;
+  font-size:21px;
+  margin:7px 0;
+}
+
+.product-content p {
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.7;
+}
+
+/* ACCESSORIES */
+.accessories {
+  background:var(--beige);
+}
+
+.accessories-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.accessory {
+  background:#faf8f2;
+  padding:27px;
+  display:flex;
+  align-items:center;
+  gap:17px;
+}
+
+.accessory-icon {
+  min-width:53px;
+  height:53px;
+  border-radius:50%;
+  background:#e8eee5;
+  color:var(--green);
+  display:grid;
+  place-items:center;
+  font-size:23px;
+}
+
+.accessory h3 {
+  font-size:14px;
+  color:var(--green);
+  margin-bottom:4px;
+}
+
+.accessory p {
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* ABOUT */
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:65px;
+}
+
+.about-image {
+  position:relative;
+}
+
+.about-image img {
+  width:100%;
+  height:390px;
+  object-fit:cover;
+  display:block;
+}
+
+.about-image:after {
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  border:2px solid var(--gold);
+  right:-13px;
+  bottom:-13px;
+  z-index:-1;
+}
+
+.about-copy .section-kicker { text-align:left; }
+
+.about-copy h2 {
+  font-family:'Playfair Display',serif;
+  font-size:39px;
+  line-height:1.2;
+  color:var(--green-dark);
+  margin-bottom:20px;
+}
+
+.about-copy p {
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.95;
+  margin-bottom:15px;
+}
+
+.about-signature {
+  margin-top:25px;
+  color:var(--gold);
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  font-style:italic;
+}
+
+/* CONTACT */
+.contact-section {
+  background:var(--green-dark);
+  color:white;
+  padding:75px 0;
+}
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.contact-copy .section-kicker { color:#d4ae70; }
+
+.contact-copy h2 {
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  line-height:1.2;
+  margin-bottom:18px;
+}
+
+.contact-copy p {
+  color:#d1d9cf;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.contact-details {
+  display:grid;
+  gap:17px;
+}
+
+.contact-line {
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:17px;
+  border:1px solid #ffffff25;
+}
+
+.contact-line .icon {
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#ffffff15;
+  font-size:19px;
+}
+
+.contact-line strong {
+  display:block;
+  font-size:13px;
+  margin-bottom:4px;
+}
+
+.contact-line span {
+  font-size:12px;
+  color:#d1d9cf;
+}
+
+.contact-line a { color:white; }
+
+.contact-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:22px;
+}
+
+.whatsapp-btn {
+  background:#477d50;
+  color:white;
+  padding:14px 20px;
+  border-radius:3px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.map-btn {
+  border:1px solid #ffffff55;
+  color:white;
+  padding:13px 20px;
+  border-radius:3px;
+  font-size:12px;
+  font-weight:700;
+}
+
+/* FOOTER */
+footer {
+  background:#12291c;
+  color:#c6d0c5;
+  padding:24px 0;
+}
+
+.footer-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  font-size:11px;
+}
+
+.footer-brand {
+  color:white;
+  font-weight:700;
+  font-size:13px;
+}
+
+/* ARABIC */
+body.arabic .hero h1,
+body.arabic .section-heading h2,
+body.arabic .about-copy h2,
+body.arabic .contact-copy h2 {
+  font-family:'Cairo',sans-serif;
+  letter-spacing:0;
+}
+
+body.arabic .eyebrow:before { display:none; }
+
+body.arabic .hero-visual { padding:0 25px 25px 0; }
+
+body.arabic .photo-label { left:auto; right:0; }
+
+body.arabic .info-item { border-right:0; border-left:1px solid #ffffff30; }
+
+body.arabic .info-item:last-child { border:0; }
+
+body.arabic .section-kicker { letter-spacing:0; }
+
+body.arabic .about-copy .section-kicker { text-align:right; }
+
+body.arabic .about-image:after { right:auto; left:-13px; }
+
+body.arabic .accessory { text-align:right; }
+
+body.arabic .footer-inner { direction:rtl; }
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  nav { gap:15px; }
+  .hero-grid { gap:30px; }
+  .hero-photo { height:380px; }
+  .products-grid { grid-template-columns:repeat(2,1fr); }
+  .animals-grid { grid-template-columns:repeat(3,1fr); }
+  .accessories-grid { grid-template-columns:1fr; }
+  .about-grid { gap:35px; }
+}
+
+@media(max-width:650px) {
+  .container { width:min(100% - 30px, 500px); }
+  .navbar { min-height:75px; flex-wrap:wrap; padding:12px 0; }
+  nav { order:3; width:100%; justify-content:space-between; gap:8px; padding:8px 0 2px; }
+  nav a { font-size:11px; }
+  .logo-mark { width:42px; height:42px; }
+  .logo-text strong { font-size:15px; }
+  .logo-text span { font-size:8px; }
+  .contact-btn { display:none; }
+  .hero { padding:40px 0 48px; }
+  .hero-grid { grid-template-columns:1fr; gap:35px; }
+  .hero h1 { font-size:43px; }
+  .hero-description { font-size:14px; }
+  .hero-visual { padding:0 0 20px 15px; }
+  .hero-photo { height:290px; }
+  .photo-label { padding:13px 17px; }
+  .info-grid { grid-template-columns:1fr; gap:17px; }
+  .info-item { justify-content:flex-start; border:0; }
+  .section { padding:65px 0; }
+  .section-heading { margin-bottom:30px; }
+  .animals-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+  .animal-card { padding:19px 8px; }
+  .products-grid { gap:11px; }
+  .product-card img { height:135px; }
+  .product-content { padding:14px; }
+  .product-content h3 { font-size:18px; }
+  .about-grid { grid-template-columns:1fr; gap:35px; }
+  .about-image img { height:280px; }
+  .about-copy h2 { font-size:32px; }
+  .contact-grid { grid-template-columns:1fr; gap:30px; }
+  .contact-copy h2 { font-size:35px; }
+  .footer-inner { flex-direction:column; text-align:center; }
+}
+</style>
 </head>
 
-<body dir="ltr">
+<body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-left">
-        <span>📍 <span data-fr="Sidi Bouzekri, Meknès" data-ar="سيدي بوزكري، مكناس">Sidi Bouzekri, Meknès</span></span>
+<header>
+  <div class="container navbar">
+    <a href="#accueil" class="logo">
+      <div class="logo-mark">N</div>
+      <div class="logo-text">
+        <strong>NIAMA AIT TALB</strong>
+        <span data-fr="Dépôt agricole · Meknès" data-ar="مستودع فلاحي · مكناس">Dépôt agricole · Meknès</span>
       </div>
-      <div class="topbar-right">
-        <span>📞 +212 662 138 445</span>
-        <span data-fr="Alimentation animale & fournitures" data-ar="أعلاف الحيوانات ومستلزمات التربية">Alimentation animale & fournitures</span>
+    </a>
+
+    <nav>
+      <a href="#accueil" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+      <a href="#elevages" data-fr="Élevages" data-ar="المواشي">Élevages</a>
+      <a href="#produits" data-fr="Produits" data-ar="المنتجات">Produits</a>
+      <a href="#apropos" data-fr="Notre dépôt" data-ar="عن المستودع">Notre dépôt</a>
+      <a href="#contact" data-fr="Contact" data-ar="اتصل بنا">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="lang-btn" id="languageButton" onclick="toggleLanguage()">العربية</button>
+      <a class="contact-btn" href="#contact" data-fr="Nous contacter ↗" data-ar="تواصل معنا ↗">Nous contacter ↗</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="accueil">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow" data-fr="AU SERVICE DES ÉLEVEURS" data-ar="في خدمة المربين">AU SERVICE DES ÉLEVEURS</div>
+
+      <h1 data-fr="L'essentiel pour bien <em>nourrir</em> vos animaux." data-ar="كل ما تحتاجونه لتغذية <em>مواشيكم</em> بعناية.">
+        L'essentiel pour bien <em>nourrir</em> vos animaux.
+      </h1>
+
+      <p class="hero-description"
+         data-fr="Des céréales, des aliments pour animaux et des fournitures pour accompagner les éleveurs au quotidien. Bienvenue chez Niama Ait Talb, à Sidi Bouzekri."
+         data-ar="حبوب وأعلاف ومستلزمات لتلبية احتياجات المربين اليومية. مرحباً بكم في مستودع نعيمة آيت طالب بسيدي بوزكري.">
+        Des céréales, des aliments pour animaux et des fournitures pour accompagner les éleveurs au quotidien. Bienvenue chez Niama Ait Talb, à Sidi Bouzekri.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#produits" class="primary-btn" data-fr="Découvrir nos produits →" data-ar="اكتشفوا منتجاتنا ←">Découvrir nos produits →</a>
+        <a href="#contact" class="secondary-btn" data-fr="Nous trouver" data-ar="موقعنا">Nous trouver</a>
+      </div>
+
+      <div class="hero-note">
+        <div class="note-icon">🌾</div>
+        <span data-fr="Au cœur de vos élevages, au service des éleveurs." data-ar="في قلب تربية مواشيكم، في خدمة المربين.">Au cœur de vos élevages, au service des éleveurs.</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <img class="hero-photo" src="entree-depot.jpg.png" alt="Dépôt Niama Ait Talb à Sidi Bouzekri">
+      <div class="photo-label">
+        <strong>Niama Ait Talb</strong>
+        <span data-fr="Votre dépôt agricole à Meknès" data-ar="مستودعكم الفلاحي بمكناس">Votre dépôt agricole à Meknès</span>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav">
-
-      <a href="#accueil" class="brand">
-        <div class="brand-mark">N</div>
-        <div>
-          <div class="brand-name">NIAMA AIT TALB</div>
-          <div class="brand-sub" data-fr="Alimentation animale" data-ar="الأعلاف الحيوانية">Alimentation animale</div>
-        </div>
-      </a>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#accueil" data-fr="Accueil" data-ar="الرئيسية">Accueil</a></li>
-        <li><a href="#elevages" data-fr="Nos élevages" data-ar="مجالات التربية">Nos élevages</a></li>
-        <li><a href="#produits" data-fr="Nos produits" data-ar="منتجاتنا">Nos produits</a></li>
-        <li><a href="#apropos" data-fr="À propos" data-ar="من نحن">À propos</a></li>
-        <li><a href="#contact" data-fr="Contact" data-ar="اتصل بنا">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <button class="language-btn" id="languageBtn" type="button">العربية</button>
-        <a class="nav-contact" href="#contact" data-fr="Nous contacter ↗" data-ar="اتصل بنا ↗">Nous contacter ↗</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" type="button">☰</button>
-      </div>
-
-    </div>
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-    <section class="hero" id="accueil">
-      <div class="hero-content">
-        <div class="hero-copy">
-
-          <div class="hero-kicker"
-            data-fr="NIAMA AIT TALB · MEKNÈS"
-            data-ar="نعيمة آيت طالب · مكناس">
-            NIAMA AIT TALB · MEKNÈS
-          </div>
-
-          <h1 data-fr="L’alimentation au cœur de <em>vos élevages.</em>"
-              data-ar="التغذية أساس <em>نجاح تربية المواشي.</em>">
-            L’alimentation au cœur de <em>vos élevages.</em>
-          </h1>
-
-          <p class="hero-description"
-             data-fr="Des aliments et des fournitures pour accompagner les éleveurs au quotidien, à Sidi Bouzekri et à Meknès."
-             data-ar="أعلاف ومستلزمات لمواكبة المربين في أعمالهم اليومية بسيدي بوزكري ومكناس.">
-            Des aliments et des fournitures pour accompagner les éleveurs au quotidien, à Sidi Bouzekri et à Meknès.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#produits" class="btn btn-primary"
-               data-fr="Découvrir nos produits ↗"
-               data-ar="اكتشف منتجاتنا ↗">
-              Découvrir nos produits ↗
-            </a>
-
-            <a href="#contact" class="btn btn-outline"
-               data-fr="Nous trouver"
-               data-ar="موقعنا">
-              Nous trouver
-            </a>
-          </div>
-
-          <div class="hero-note">
-            <div class="hero-note-icon">✦</div>
-            <span data-fr="Votre partenaire de confiance pour l’alimentation animale."
-                  data-ar="شريككم الموثوق في مجال الأعلاف الحيوانية.">
-              Votre partenaire de confiance pour l’alimentation animale.
-            </span>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- INTRO STRIP -->
-    <section class="intro-strip">
-      <div class="container intro-strip-inner">
-        <strong data-fr="Au service des éleveurs et de leurs animaux."
-                data-ar="في خدمة المربين وحيواناتهم.">
-          Au service des éleveurs et de leurs animaux.
-        </strong>
-        <span data-fr="Niama Ait Talb · Sidi Bouzekri, Meknès"
-              data-ar="نعيمة آيت طالب · سيدي بوزكري، مكناس">
-          Niama Ait Talb · Sidi Bouzekri, Meknès
-        </span>
-      </div>
-    </section>
-
-    <!-- CATEGORIES -->
-    <section class="categories" id="elevages">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="eyebrow" data-fr="NOS DOMAINES" data-ar="مجالاتنا">NOS DOMAINES</span>
-          <h2 data-fr="Des solutions pour chaque élevage."
-              data-ar="مستلزمات لمختلف أنواع التربية.">
-            Des solutions pour chaque élevage.
-          </h2>
-          <p data-fr="Découvrez les différents types d’élevage auxquels s’adressent nos aliments et fournitures."
-             data-ar="اكتشفوا مختلف أنواع التربية التي نوفر لها الأعلاف والمستلزمات.">
-            Découvrez les différents types d’élevage auxquels s’adressent nos aliments et fournitures.
-          </p>
-        </div>
-
-        <div class="categories-grid">
-
-          <article class="category-card">
-            <div class="category-image">
-              <img
-                src="https://gooddogpeople.com/cdn/shop/articles/Green_Tripe_-_Superfood_or_Fad_1024x.jpg?v=1717736799"
-                alt="Troupeau de moutons dans un pâturage"
-                loading="lazy">
-              <span class="category-number">01</span>
-            </div>
-            <div class="category-info">
-              <h3 data-fr="Ovins" data-ar="الأغنام">Ovins</h3>
-              <p data-fr="Alimentation destinée aux moutons et aux troupeaux."
-                 data-ar="أعلاف مخصصة للأغنام والقطعان.">
-                Alimentation destinée aux moutons et aux troupeaux.
-              </p>
-            </div>
-          </article>
-
-          <article class="category-card">
-            <div class="category-image">
-              <img
-                src="https://static.wixstatic.com/media/4ab5e2_1058ca5eb1d645c7b82859b1903cefcc~mv2.jpg/v1/fill/w_640%2Ch_436%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/4ab5e2_1058ca5eb1d645c7b82859b1903cefcc~mv2.jpg"
-                alt="Vaches dans un pré"
-                loading="lazy">
-              <span class="category-number">02</span>
-            </div>
-            <div class="category-info">
-              <h3 data-fr="Bovins" data-ar="الأبقار">Bovins</h3>
-              <p data-fr="Des aliments pour accompagner l’élevage bovin."
-                 data-ar="أعلاف لمواكبة تربية الأبقار.">
-                Des aliments pour accompagner l’élevage bovin.
-              </p>
-            </div>
-          </article>
-
-          <article class="category-card">
-            <div class="category-image">
-              <img
-                src="https://images.squarespace-cdn.com/content/v1/622b62a83c01c7609a589db4/f615de49-259b-49a5-af8a-afbd34721c36/4D951CBF-8040-49DB-992D-E06C6AC79227.JPG"
-                alt="Poules dans un élevage"
-                loading="lazy">
-              <span class="category-number">03</span>
-            </div>
-            <div class="category-info">
-              <h3 data-fr="Volailles" data-ar="الدواجن">Volailles</h3>
-              <p data-fr="Alimentation pour les poules et les élevages de volailles."
-                 data-ar="أعلاف للدجاج ومختلف أنواع الدواجن.">
-                Alimentation pour les poules et les élevages de volailles.
-              </p>
-            </div>
-          </article>
-
-          <article class="category-card">
-            <div class="category-image">
-              <img
-                src="https://i.natgeofe.com/n/939b410d-2027-4258-a957-1b8c3f225e47/GettyImages-498002058_3x2.jpg"
-                alt="Groupe de pigeons en vol"
-                loading="lazy">
-              <span class="category-number">04</span>
-            </div>
-            <div class="category-info">
-              <h3 data-fr="Pigeons" data-ar="الحمام">Pigeons</h3>
-              <p data-fr="Des aliments adaptés à l’élevage des pigeons."
-                 data-ar="أعلاف مخصصة لتربية الحمام.">
-                Des aliments adaptés à l’élevage des pigeons.
-              </p>
-            </div>
-          </article>
-
-          <article class="category-card">
-            <div class="category-image">
-              <img
-                src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=900&q=85"
-                alt="Lapin dans un environnement naturel"
-                loading="lazy">
-              <span class="category-number">05</span>
-            </div>
-            <div class="category-info">
-              <h3 data-fr="Lapins" data-ar="الأرانب">Lapins</h3>
-              <p data-fr="Des aliments pour accompagner les petits élevages."
-                 data-ar="أعلاف لمواكبة تربية الأرانب.">
-                Des aliments pour accompagner les petits élevages.
-              </p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section class="products" id="produits">
-      <div class="container products-layout">
-
-        <div class="products-visual">
-          <div class="visual-label">
-            <span data-fr="NIAMA AIT TALB" data-ar="نعيمة آيت طالب">NIAMA AIT TALB</span>
-            <h3 data-fr="Des produits pour vos élevages"
-                data-ar="منتجات لمواكبة تربية المواشي">
-              Des produits pour vos élevages
-            </h3>
-          </div>
-        </div>
-
-        <div class="products-copy">
-          <div class="section-heading">
-            <span class="eyebrow" data-fr="NOTRE SÉLECTION" data-ar="منتجاتنا">NOTRE SÉLECTION</span>
-            <h2 data-fr="Les essentiels de l’alimentation animale."
-                data-ar="أساسيات التغذية الحيوانية.">
-              Les essentiels de l’alimentation animale.
-            </h2>
-            <p data-fr="Une sélection de céréales, d’aliments et de fournitures pour répondre aux besoins des éleveurs."
-               data-ar="مجموعة من الحبوب والأعلاف والمستلزمات لتلبية احتياجات المربين.">
-              Une sélection de céréales, d’aliments et de fournitures pour répondre aux besoins des éleveurs.
-            </p>
-          </div>
-
-          <div class="products-list">
-
-            <div class="product-item">
-              <div class="product-icon">🌾</div>
-              <div>
-                <strong data-fr="Son de blé" data-ar="نخالة القمح">Son de blé</strong>
-                <small data-fr="Céréales et dérivés" data-ar="الحبوب ومشتقاتها">Céréales et dérivés</small>
-              </div>
-            </div>
-
-            <div class="product-item">
-              <div class="product-icon">🌽</div>
-              <div>
-                <strong data-fr="Maïs" data-ar="الذرة">Maïs</strong>
-                <small data-fr="Céréales" data-ar="الحبوب">Céréales</small>
-              </div>
-            </div>
-
-            <div class="product-item">
-              <div class="product-icon">🌾</div>
-              <div>
-                <strong data-fr="Blé" data-ar="القمح">Blé</strong>
-                <small data-fr="Céréales" data-ar="الحبوب">Céréales</small>
-              </div>
-            </div>
-
-            <div class="product-item">
-              <div class="product-icon">▤</div>
-              <div>
-                <strong data-fr="Aliments préparés" data-ar="أعلاف مركبة">Aliments préparés</strong>
-                <small data-fr="Sacs d’aliments" data-ar="أكياس الأعلاف">Sacs d’aliments</small>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ACCESSORIES -->
-    <section class="accessories">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="eyebrow" data-fr="EN PLUS DES ALIMENTS" data-ar="بالإضافة إلى الأعلاف">EN PLUS DES ALIMENTS</span>
-          <h2 data-fr="Les accessoires pour votre élevage."
-              data-ar="مستلزمات تربية المواشي.">
-            Les accessoires pour votre élevage.
-          </h2>
-          <p data-fr="Retrouvez également des fournitures utiles pour accompagner le travail quotidien des éleveurs."
-             data-ar="نوفر أيضًا مستلزمات تساعد المربين في أعمالهم اليومية.">
-            Retrouvez également des fournitures utiles pour accompagner le travail quotidien des éleveurs.
-          </p>
-        </div>
-
-        <div class="accessories-grid">
-
-          <article class="accessory-card">
-            <div class="accessory-icon">◆</div>
-            <div>
-              <h3 data-fr="Pierres à sel" data-ar="قوالب الملح">Pierres à sel</h3>
-              <p data-fr="Blocs de sel destinés aux animaux d’élevage."
-                 data-ar="قوالب ملح مخصصة لحيوانات التربية.">
-                Blocs de sel destinés aux animaux d’élevage.
-              </p>
-            </div>
-          </article>
-
-          <article class="accessory-card">
-            <div class="accessory-icon">⌁</div>
-            <div>
-              <h3 data-fr="Pinces à boucles" data-ar="كماشات ترقيم الأذن">Pinces à boucles</h3>
-              <p data-fr="Matériel pour la pose des boucles d’identification."
-                 data-ar="معدات لتركيب علامات تعريف الحيوانات.">
-                Matériel pour la pose des boucles d’identification.
-              </p>
-            </div>
-          </article>
-
-          <article class="accessory-card">
-            <div class="accessory-icon">◇</div>
-            <div>
-              <h3 data-fr="Boucles auriculaires" data-ar="علامات الأذن">Boucles auriculaires</h3>
-              <p data-fr="Boucles destinées à l’identification des animaux."
-                 data-ar="علامات مخصصة لتعريف الحيوانات.">
-                Boucles destinées à l’identification des animaux.
-              </p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- QUOTE BANNER -->
-    <section class="quote-banner">
-      <div class="container quote-inner">
-        <span data-fr="NIAMA AIT TALB · MEKNÈS" data-ar="نعيمة آيت طالب · مكناس">NIAMA AIT TALB · MEKNÈS</span>
-        <h2 data-fr="Votre partenaire de confiance pour l’alimentation animale."
-            data-ar="شريككم الموثوق في مجال الأعلاف الحيوانية.">
-          Votre partenaire de confiance pour l’alimentation animale.
-        </h2>
-        <p data-fr="À vos côtés pour accompagner vos activités d’élevage."
-           data-ar="إلى جانبكم لمواكبة أنشطتكم في تربية المواشي.">
-          À vos côtés pour accompagner vos activités d’élevage.
-        </p>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="apropos">
-      <div class="container about-grid">
-
-        <div class="about-image">
-          <img src="entree-depot.jpg.png" alt="Dépôt Niama Ait Talb à Sidi Bouzekri" loading="lazy">
-        </div>
-
-        <div class="about-copy">
-          <span class="eyebrow" data-fr="QUI SOMMES-NOUS ?" data-ar="من نحن؟">QUI SOMMES-NOUS ?</span>
-
-          <h2 data-fr="Au plus près des besoins des éleveurs."
-              data-ar="قريبون من احتياجات المربين.">
-            Au plus près des besoins des éleveurs.
-          </h2>
-
-          <p data-fr="Situé à Sidi Bouzekri, à Meknès, Niama Ait Talb est un dépôt dédié à l’alimentation animale et aux fournitures pour l’élevage. Nous proposons des céréales, des aliments préparés et différents accessoires utiles aux éleveurs."
-             data-ar="يقع مستودع نعيمة آيت طالب بسيدي بوزكري في مكناس، وهو متخصص في الأعلاف الحيوانية ومستلزمات التربية. نوفر الحبوب والأعلاف المركبة ومجموعة من المستلزمات المفيدة للمربين.">
-            Situé à Sidi Bouzekri, à Meknès, Niama Ait Talb est un dépôt dédié à l’alimentation animale et aux fournitures pour l’élevage. Nous proposons des céréales, des aliments préparés et différents accessoires utiles aux éleveurs.
-          </p>
-
-          <div class="about-points">
-            <div class="about-point">
-              <span class="check">✓</span>
-              <span data-fr="Alimentation animale et céréales" data-ar="الأعلاف الحيوانية والحبوب">Alimentation animale et céréales</span>
-            </div>
-            <div class="about-point">
-              <span class="check">✓</span>
-              <span data-fr="Fournitures et accessoires d’élevage" data-ar="مستلزمات وأدوات التربية">Fournitures et accessoires d’élevage</span>
-            </div>
-            <div class="about-point">
-              <span class="check">✓</span>
-              <span data-fr="Un dépôt situé à Sidi Bouzekri, Meknès" data-ar="مستودعنا في سيدي بوزكري، مكناس">Un dépôt situé à Sidi Bouzekri, Meknès</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="eyebrow" data-fr="NOUS TROUVER" data-ar="تواصلوا معنا">NOUS TROUVER</span>
-          <h2 data-fr="Rendez-nous visite à Meknès."
-              data-ar="زورونا في مكناس.">
-            Rendez-nous visite à Meknès.
-          </h2>
-          <p data-fr="Une question sur nos produits ? Contactez-nous ou retrouvez directement notre dépôt à Sidi Bouzekri."
-             data-ar="هل لديكم سؤال حول منتجاتنا؟ تواصلوا معنا أو زوروا مستودعنا بسيدي بوزكري.">
-            Une question sur nos produits ? Contactez-nous ou retrouvez directement notre dépôt à Sidi Bouzekri.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-
-          <div class="contact-card">
-            <span class="eyebrow" data-fr="CONTACT" data-ar="اتصال">CONTACT</span>
-            <h2 data-fr="Parlons de vos besoins."
-                data-ar="تواصلوا معنا لمعرفة احتياجاتكم.">
-              Parlons de vos besoins.
-            </h2>
-            <p data-fr="Notre équipe est à votre disposition pour toute question concernant nos produits et fournitures."
-               data-ar="نحن رهن إشارتكم للإجابة عن استفساراتكم حول المنتجات والمستلزمات.">
-              Notre équipe est à votre disposition pour toute question concernant nos produits et fournitures.
-            </p>
-
-            <div class="contact-detail">
-              <div class="contact-detail-icon">☎</div>
-              <div>
-                <strong data-fr="Téléphone" data-ar="الهاتف">Téléphone</strong>
-                <a href="tel:+212662138445">+212 662 138 445</a>
-              </div>
-            </div>
-
-            <div class="contact-detail">
-              <div class="contact-detail-icon">◉</div>
-              <div>
-                <strong>WhatsApp</strong>
-                <a href="https://wa.me/212662138445" target="_blank" rel="noopener">+212 662 138 445</a>
-              </div>
-            </div>
-
-            <div class="contact-detail">
-              <div class="contact-detail-icon">⌖</div>
-              <div>
-                <strong data-fr="Adresse" data-ar="العنوان">Adresse</strong>
-                <span data-fr="VF68+22W, Sidi Bouzekri, Meknès, Maroc"
-                      data-ar="VF68+22W، سيدي بوزكري، مكناس، المغرب">
-                  VF68+22W, Sidi Bouzekri, Meknès, Maroc
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="map-card">
-            <iframe
-              src="https://maps.google.com/maps?q=VF68%2B22W%20Sidi%20Bouzekri%20Meknes%20Morocco&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Localisation de Niama Ait Talb à Sidi Bouzekri">
-            </iframe>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
+<div class="info-strip">
+  <div class="container info-grid">
+    <div class="info-item">
+      <div class="info-icon">📍</div>
       <div>
-        <div class="footer-brand">NIAMA AIT TALB</div>
-        <p data-fr="Alimentation animale · Sidi Bouzekri, Meknès"
-           data-ar="الأعلاف الحيوانية · سيدي بوزكري، مكناس">
-          Alimentation animale · Sidi Bouzekri, Meknès
-        </p>
+        <strong data-fr="Sidi Bouzekri" data-ar="سيدي بوزكري">Sidi Bouzekri</strong>
+        <span data-fr="Meknès, Maroc" data-ar="مكناس، المغرب">Meknès, Maroc</span>
       </div>
-
-      <div class="footer-links">
-        <a href="#accueil" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
-        <a href="#produits" data-fr="Produits" data-ar="المنتجات">Produits</a>
-        <a href="#contact" data-fr="Contact" data-ar="اتصل بنا">Contact</a>
-      </div>
-
-      <p>© <span id="currentYear"></span> Niama Ait Talb</p>
     </div>
-  </footer>
+    <div class="info-item">
+      <div class="info-icon">🌾</div>
+      <div>
+        <strong data-fr="Alimentation animale" data-ar="الأعلاف الحيوانية">Alimentation animale</strong>
+        <span data-fr="Céréales et aliments" data-ar="الحبوب والأعلاف">Céréales et aliments</span>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🤝</div>
+      <div>
+        <strong data-fr="Proximité & confiance" data-ar="القرب والثقة">Proximité & confiance</strong>
+        <span data-fr="Au service des éleveurs" data-ar="في خدمة المربين">Au service des éleveurs</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <!-- WHATSAPP BUTTON -->
-  <a class="whatsapp-float"
-     href="https://wa.me/212662138445"
-     target="_blank"
-     rel="noopener"
-     aria-label="Contacter Niama Ait Talb sur WhatsApp">
-    ☎
-  </a>
+<section class="section animals-section" id="elevages">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-kicker" data-fr="POUR VOS ÉLEVAGES" data-ar="لثروتكم الحيوانية">POUR VOS ÉLEVAGES</div>
+      <h2 data-fr="Chaque élevage mérite le meilleur." data-ar="لكل تربية احتياجاتها.">Chaque élevage mérite le meilleur.</h2>
+      <p data-fr="Nous proposons des aliments adaptés aux différents animaux d'élevage." data-ar="نوفر أعلافاً مخصصة لمختلف أنواع المواشي والحيوانات.">Nous proposons des aliments adaptés aux différents animaux d'élevage.</p>
+    </div>
 
-  <script>
-    // LANGUAGE SWITCH
-    const languageBtn = document.getElementById("languageBtn");
-    let currentLanguage = "fr";
+    <div class="animals-grid">
+      <div class="animal-card">
+        <div class="animal-icon">🐑</div>
+        <strong data-fr="Ovins" data-ar="الأغنام">Ovins</strong>
+      </div>
+      <div class="animal-card">
+        <div class="animal-icon">🐄</div>
+        <strong data-fr="Bovins" data-ar="الأبقار">Bovins</strong>
+      </div>
+      <div class="animal-card">
+        <div class="animal-icon">🐔</div>
+        <strong data-fr="Volailles" data-ar="الدواجن">Volailles</strong>
+      </div>
+      <div class="animal-card">
+        <div class="animal-icon">🐦</div>
+        <strong data-fr="Pigeons" data-ar="الحمام">Pigeons</strong>
+      </div>
+      <div class="animal-card">
+        <div class="animal-icon">🐇</div>
+        <strong data-fr="Lapins" data-ar="الأرانب">Lapins</strong>
+      </div>
+    </div>
+  </div>
+</section>
 
-    function changeLanguage(language) {
-      currentLanguage = language;
+<section class="section" id="produits">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-kicker" data-fr="NOS PRODUITS" data-ar="منتجاتنا">NOS PRODUITS</div>
+      <h2 data-fr="Les indispensables de l'alimentation animale." data-ar="أساسيات التغذية الحيوانية.">Les indispensables de l'alimentation animale.</h2>
+      <p data-fr="Retrouvez au dépôt une sélection de céréales et d'aliments pour accompagner votre activité." data-ar="اكتشفوا في مستودعنا مجموعة من الحبوب والأعلاف لمواكبة نشاطكم.">Retrouvez au dépôt une sélection de céréales et d'aliments pour accompagner votre activité.</p>
+    </div>
 
-      document.documentElement.lang = language;
-      document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-      document.body.dir = language === "ar" ? "rtl" : "ltr";
+    <div class="products-grid">
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=700&q=85" alt="Grains de maïs">
+        <div class="product-content">
+          <small data-fr="CÉRÉALES" data-ar="الحبوب">CÉRÉALES</small>
+          <h3 data-fr="Maïs" data-ar="الذرة">Maïs</h3>
+          <p data-fr="Une céréale incontournable pour l'alimentation animale." data-ar="من الحبوب الأساسية في تغذية الحيوانات.">Une céréale incontournable pour l'alimentation animale.</p>
+        </div>
+      </article>
 
-      document.querySelectorAll("[data-fr][data-ar]").forEach(element => {
-        element.innerHTML = element.getAttribute("data-" + language);
-      });
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1501436513145-30f24e19fcc4?auto=format&fit=crop&w=700&q=85" alt="Champ de blé">
+        <div class="product-content">
+          <small data-fr="CÉRÉALES" data-ar="الحبوب">CÉRÉALES</small>
+          <h3 data-fr="Blé" data-ar="القمح">Blé</h3>
+          <p data-fr="Une céréale utilisée dans différentes préparations alimentaires." data-ar="حبوب تدخل في تركيبات غذائية متنوعة.">Une céréale utilisée dans différentes préparations alimentaires.</p>
+        </div>
+      </article>
 
-      languageBtn.textContent = language === "fr" ? "العربية" : "Français";
-    }
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=700&q=85" alt="Récolte de céréales">
+        <div class="product-content">
+          <small data-fr="CÉRÉALES" data-ar="الحبوب">CÉRÉALES</small>
+          <h3 data-fr="Son de blé" data-ar="نخالة القمح">Son de blé</h3>
+          <p data-fr="Un produit apprécié dans les rations destinées à l'élevage." data-ar="منتج يستعمل في تركيبات أعلاف المواشي.">Un produit apprécié dans les rations destinées à l'élevage.</p>
+        </div>
+      </article>
 
-    languageBtn.addEventListener("click", () => {
-      changeLanguage(currentLanguage === "fr" ? "ar" : "fr");
-    });
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1601593768790-3f7e4e4a5c8b?auto=format&fit=crop&w=700&q=85" alt="Sacs d'aliments">
+        <div class="product-content">
+          <small data-fr="ALIMENTATION" data-ar="الأعلاف">ALIMENTATION</small>
+          <h3 data-fr="Aliments préparés" data-ar="الأعلاف المركبة">Aliments préparés</h3>
+          <p data-fr="Des aliments conditionnés en sacs pour différents élevages." data-ar="أعلاف معبأة في أكياس لمختلف أنواع التربية.">Des aliments conditionnés en sacs pour différents élevages.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    // MOBILE MENU
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+<section class="section accessories">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-kicker" data-fr="EN PLUS DES ALIMENTS" data-ar="بالإضافة إلى الأعلاف">EN PLUS DES ALIMENTS</div>
+      <h2 data-fr="Les accessoires utiles à votre élevage." data-ar="مستلزمات تساعدكم في تربية المواشي.">Les accessoires utiles à votre élevage.</h2>
+      <p data-fr="Des fournitures pratiques pour accompagner les éleveurs dans leur travail quotidien." data-ar="مستلزمات عملية لمساعدة المربين في عملهم اليومي.">Des fournitures pratiques pour accompagner les éleveurs dans leur travail quotidien.</p>
+    </div>
 
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-      menuToggle.textContent = navLinks.classList.contains("open") ? "✕" : "☰";
-    });
+    <div class="accessories-grid">
+      <div class="accessory">
+        <div class="accessory-icon">🧂</div>
+        <div>
+          <h3 data-fr="Blocs à lécher" data-ar="قوالب الملح">Blocs à lécher</h3>
+          <p data-fr="Compléments minéraux pour les animaux." data-ar="مكملات معدنية للحيوانات.">Compléments minéraux pour les animaux.</p>
+        </div>
+      </div>
+      <div class="accessory">
+        <div class="accessory-icon">🔧</div>
+        <div>
+          <h3 data-fr="Pinces à boucles" data-ar="كماشات الترقيم">Pinces à boucles</h3>
+          <p data-fr="Pour les opérations de marquage." data-ar="لعمليات ترقيم المواشي.">Pour les opérations de marquage.</p>
+        </div>
+      </div>
+      <div class="accessory">
+        <div class="accessory-icon">🏷️</div>
+        <div>
+          <h3 data-fr="Boucles d'identification" data-ar="حلقات التعريف">Boucles d'identification</h3>
+          <p data-fr="Pour l'identification des animaux." data-ar="لتعريف وترقيم الحيوانات.">Pour l'identification des animaux.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.textContent = "☰";
-      });
-    });
+<section class="section" id="apropos">
+  <div class="container about-grid">
+    <div class="about-image">
+      <img src="entree-depot.jpg.png" alt="Le dépôt Niama Ait Talb">
+    </div>
+    <div class="about-copy">
+      <div class="section-kicker" data-fr="QUI SOMMES-NOUS ?" data-ar="من نحن؟">QUI SOMMES-NOUS ?</div>
+      <h2 data-fr="Un dépôt proche de ceux qui font vivre l'élevage." data-ar="مستودع قريب من أهل تربية المواشي.">Un dépôt proche de ceux qui font vivre l'élevage.</h2>
+      <p data-fr="Situé à Sidi Bouzekri, à Meknès, Niama Ait Talb accompagne les éleveurs en proposant des céréales, des aliments pour animaux et des accessoires d'élevage."
+         data-ar="يقع مستودع نعيمة آيت طالب بسيدي بوزكري بمدينة مكناس، ويواكب المربين من خلال توفير الحبوب والأعلاف ومستلزمات تربية المواشي.">
+        Situé à Sidi Bouzekri, à Meknès, Niama Ait Talb accompagne les éleveurs en proposant des céréales, des aliments pour animaux et des accessoires d'élevage.
+      </p>
+      <p data-fr="Notre ambition : être un point de proximité pratique pour répondre aux besoins des éleveurs et contribuer à leur activité au quotidien."
+         data-ar="هدفنا أن نكون وجهة قريبة وعملية لتلبية احتياجات المربين ومواكبة نشاطهم اليومي.">
+        Notre ambition : être un point de proximité pratique pour répondre aux besoins des éleveurs et contribuer à leur activité au quotidien.
+      </p>
+      <div class="about-signature" data-fr="Au cœur de vos élevages." data-ar="في قلب تربية مواشيكم.">Au cœur de vos élevages.</div>
+    </div>
+  </div>
+</section>
 
-    // CURRENT YEAR
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-  </script>
+<section class="contact-section" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <div class="section-kicker" data-fr="RENDEZ-NOUS VISITE" data-ar="زورونا">RENDEZ-NOUS VISITE</div>
+      <h2 data-fr="Parlons de vos besoins." data-ar="نحن هنا لتلبية احتياجاتكم.">Parlons de vos besoins.</h2>
+      <p data-fr="Une question sur nos produits ou besoin d'informations ? Contactez-nous ou passez directement au dépôt."
+         data-ar="لديكم سؤال حول منتجاتنا أو تحتاجون إلى معلومات؟ تواصلوا معنا أو زوروا مستودعنا مباشرة.">
+        Une question sur nos produits ou besoin d'informations ? Contactez-nous ou passez directement au dépôt.
+      </p>
+      <div class="contact-actions">
+        <a class="whatsapp-btn" href="https://wa.me/212662138445" target="_blank" rel="noopener" data-fr="Discuter sur WhatsApp ↗" data-ar="تواصل عبر واتساب ↗">Discuter sur WhatsApp ↗</a>
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=VF68%2B22W%2C+Sidi+Bouzekri%2C+Meknes%2C+Morocco" target="_blank" rel="noopener" data-fr="Voir sur Google Maps ↗" data-ar="الموقع على الخريطة ↗">Voir sur Google Maps ↗</a>
+      </div>
+    </div>
+
+    <div class="contact-details">
+      <div class="contact-line">
+        <div class="icon">📍</div>
+        <div>
+          <strong data-fr="Notre adresse" data-ar="عنواننا">Notre adresse</strong>
+          <span>Sidi Bouzekri, Meknès, Maroc</span>
+        </div>
+      </div>
+      <div class="contact-line">
+        <div class="icon">📞</div>
+        <div>
+          <strong data-fr="Téléphone" data-ar="الهاتف">Téléphone</strong>
+          <span><a href="tel:+212662138445">+212 662 138 445</a></span>
+        </div>
+      </div>
+      <div class="contact-line">
+        <div class="icon">💬</div>
+        <div>
+          <strong>WhatsApp</strong>
+          <span><a href="https://wa.me/212662138445" target="_blank" rel="noopener">+212 662 138 445</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">NIAMA AIT TALB</div>
+    <div data-fr="Au cœur de vos élevages, au service des éleveurs." data-ar="في قلب تربية مواشيكم، في خدمة المربين.">Au cœur de vos élevages, au service des éleveurs.</div>
+    <div>© <span id="year"></span> Niama Ait Talb</div>
+  </div>
+</footer>
+
+<script>
+let currentLanguage = "fr";
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "fr" ? "ar" : "fr";
+
+  document.documentElement.lang = currentLanguage;
+  document.body.classList.toggle("arabic", currentLanguage === "ar");
+
+  document.querySelectorAll("[data-fr][data-ar]").forEach(element => {
+    element.innerHTML = element.getAttribute("data-" + currentLanguage);
+  });
+
+  document.getElementById("languageButton").textContent =
+    currentLanguage === "fr" ? "العربية" : "Français";
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
